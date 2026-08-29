@@ -1,0 +1,131 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1F1F1F;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  /* Brand Colors */
+  --color-primary: #0B8457;
+  --color-primary-hover: #076B45;
+  --color-secondary: #064E32;
+  --color-secondary-light: #0B8457;
+  --color-accent-light: #ECFDF5;
+  
+  /* Text Colors */
+  --color-text-dark: #1F1F1F;
+  --color-text-light: #6B7280;
+
+  /* Typography */
+  --font-sans: var(--font-poppins);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-poppins), sans-serif;
+}
+
+/* Micro-Animations & Custom Transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-shake {
+  animation: shake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+.animate-spin-slow {
+  animation: spin 4s linear infinite;
+}
+
+/* Shared motion utilities used across hero/feature sections */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes pulseSlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes dashDraw {
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-float {
+  animation: floatY 4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 3.5s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-dash-draw {
+  animation: dashDraw 1.2s ease-out forwards;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-1000 {
+  animation-delay: 1s;
+}
+

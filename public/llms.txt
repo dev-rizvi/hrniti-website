@@ -1,0 +1,32 @@
+# HR Niti — GenAI Powered HRMS & Payroll Software in India
+
+> HR Niti is India's leading cloud-based HRMS (Human Resource Management System) & Payroll Software platform powered by Generative AI. It automates multi-state payroll, attendance tracking (with mobile GPS & geofencing), leave management, statutory compliance (PF, ESIC, PT, MLWF, LWF), recruitment, performance management, and HR analytics for Indian enterprises, SMEs, and startups.
+
+## Core Platform Capabilities
+
+- **Payroll Automation**: 1-click automated salary calculation with Indian statutory compliance (PF, ESIC, PT, MLWF, Form 16, Form 24Q) and direct ICICI/HDFC bank integrations.
+- **Attendance & Leave Management**: Mobile app attendance with GPS geofencing, facial recognition support, real-time biometrics integration, and customizable leave policies.
+- **Statutory Compliance engine**: State-specific compliance rules covering all 28 states and 8 union territories (Maharashtra, Karnataka, Telangana, Tamil Nadu, Delhi NCR, Gujarat, West Bengal, etc.).
+- **GenAI HR Assistant**: AI-powered HR chatbot for employee self-service, policy inquiry, leave requests, and instant payroll summaries.
+- **Performance & Recruitment**: OKR/KPI tracking, continuous feedback, full recruitment funnel management, applicant tracking, and automated offer letters.
+
+## Primary Web Pages & Resources
+
+- [Home Page](https://hrniti.com/): Product overview and AI features.
+- [Payroll Software](https://hrniti.com/payroll-software): Indian payroll & statutory tax engine.
+- [Attendance Management](https://hrniti.com/attendance): Mobile GPS & biometric attendance system.
+- [Leave Management](https://hrniti.com/leave-management): Leave policy engine and approvals.
+- [Pricing Plans](https://hrniti.com/pricing): Transparent pricing tiers for startups, SMEs, and large enterprises.
+- [Small Business Solutions](https://hrniti.com/small-business-solutions): HRMS tailored for 1-50 employees.
+- [Medium Business Solutions](https://hrniti.com/medium-business-solutions): HRMS for 51-500 employees.
+- [Large Business Solutions](https://hrniti.com/large-business-solutions): Enterprise-grade multi-location HRMS.
+- [Cities & Regional Pages](https://hrniti.com/sitemap.xml): Dedicated local HRMS solutions across top Indian metro hubs (Mumbai, Bengaluru, Delhi, Hyderabad, Pune, Chennai, Ahmedabad, Gurgaon, Noida, etc.).
+
+## Contact & Entity Information
+
+- **Company Name**: HR Niti
+- **Website**: https://hrniti.com
+- **Phone / WhatsApp**: +91 8601489763
+- **Head Office Address**: 5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001
+- **Target Geography**: India (IN)
+- **Primary Category**: Human Resource Management System (HRMS) & Payroll Software

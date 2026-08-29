@@ -1,0 +1,205 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+/// This table contains check constraints and requires additional setup for migrations. Visit https://pris.ly/d/check-constraints for more info.
+/// This model contains row level security and requires additional setup for migrations. Visit https://pris.ly/d/row-level-security for more info.
+model contact_settings {
+  id               Int       @id @default(1)
+  phone            String
+  whatsapp         String
+  email            String
+  location_address String
+  location_map_url String
+  logo_url         String?
+  facebook_url     String?
+  twitter_url      String?
+  linkedin_url     String?
+  instagram_url    String?
+  copyright_text   String?
+  updated_at       DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model Blog {
+  id               String   @id @default(uuid())
+  title            String
+  slug             String   @unique
+  content          String
+  summary          String
+  author           String   @default("HR Niti Team")
+  category         String   @default("General")
+  featured_image   String?
+  meta_title       String?
+  meta_description String?
+  meta_keywords    String?
+  published        Boolean  @default(false)
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+
+  @@map("blogs")
+}
+
+model contact_inquiries {
+  id         Int       @id @default(autoincrement())
+  name       String
+  email      String
+  phone      String
+  subject    String
+  message    String
+  status     String    @default("new")
+  created_at DateTime  @default(now()) @db.Timestamptz(6)
+}
+
+model about_settings {
+  id                 Int       @id @default(1)
+  hero_title         String    @default("ABOUT US")
+  hero_subtitle      String    @default("Building the Future of HR with 20 Years of Excellence and Continuous Innovation.")
+  hero_description   String    @default("We are on a mission to simplify human resource management for businesses of all sizes through intelligent, cloud-based solutions.")
+  hero_image_url     String?
+  story_title        String    @default("Why HR Niti?")
+  story_subtitle     String    @default("OUR STORY")
+  story_description  String    @db.Text
+  story_image_url    String?
+  vision_title       String    @default("Vision & Mission")
+  vision_subtitle    String    @default("OUR PHILOSOPHY")
+  vision_description String    @db.Text
+  vision_image_url   String?
+  updated_at         DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model pricing_settings {
+  id               Int       @id @default(1)
+  hero_title       String    @default("Plans that Grow with Your Business")
+  hero_subtitle    String    @default("Transparent Pricing")
+  hero_description String    @default("Choose the perfect plan for your team size. No hidden setup fees, no long-term contracts. Just simple, scalable HR software.")
+  updated_at       DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model pricing_plan {
+  id            String   @id @default(uuid())
+  name          String
+  price         String
+  period        String   @default("/month")
+  desc          String   @db.Text
+  features      String[]
+  cta           String   @default("Get Started")
+  popular       Boolean  @default(false)
+  color         String   @default("blue")
+  display_order Int      @default(0)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("pricing_plans")
+}
+
+model pricing_comparison_feature {
+  id            String   @id @default(uuid())
+  category      String   @default("Core HR")
+  name          String
+  std_value     String   @default("")
+  pro_value     String   @default("")
+  ent_value     String   @default("")
+  display_order Int      @default(0)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("pricing_comparison_features")
+}
+
+model pricing_faq {
+  id            String   @id @default(uuid())
+  question      String
+  answer        String   @db.Text
+  display_order Int      @default(0)
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+
+  @@map("pricing_faqs")
+}
+
+model legal_settings {
+  id              Int       @id @default(1)
+  privacy_title   String    @default("Privacy Policy")
+  privacy_content String    @db.Text
+  terms_title     String    @default("Terms of Service")
+  terms_content   String    @db.Text
+  updated_at      DateTime? @default(now()) @db.Timestamptz(6)
+}
+
+model CaseStudy {
+  id         String   @id @default(uuid())
+  slug       String   @unique
+  company    String
+  logoText   String
+  industry   String
+  tag        String
+  title      String
+  challenge  String   @db.Text
+  solution   String   @db.Text
+  metrics    String[]
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  @@map("case_studies")
+}
+
+model Video {
+  id          String   @id @default(uuid())
+  youtubeId   String
+  title       String
+  description String   @db.Text
+  category    String
+  duration    String
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("videos")
+}
+
+model Template {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  description String   @db.Text
+  tag         String   @default("Template")
+  content     String?  @db.Text
+  file_url    String?
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("templates")
+}
+
+model TemplateDownloadLead {
+  id             String   @id @default(uuid())
+  email          String
+  company        String
+  phone          String
+  template_slug  String
+  template_title String
+  source         String   @default("templates")
+  created_at     DateTime @default(now())
+
+  @@index([template_slug])
+  @@index([email])
+  @@map("template_download_leads")
+}
+
+model ProductUpdate {
+  id          String   @id @default(uuid())
+  title       String
+  slug        String   @unique
+  summary     String   @db.Text
+  content     String?  @db.Text
+  category    String   @default("Release")
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("product_updates")
+}
