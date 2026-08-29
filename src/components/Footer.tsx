@@ -96,25 +96,24 @@ export default function Footer() {
             ]
         },
         resources: {
-            title: "Resources",
+            title: "Resources & Guides",
             items: [
-
-                { name: "HR Glossary",      href: "/resources/hr-glossary" },
-                { name: "HR Tools",         href: "/tools" },
-                { name: "Research Reports", href: "/reports" },
-                { name: "HR Templates",     href: "/templates" },
-
-
+                { name: "HR Glossary",           href: "/resources/hr-glossary" },
+                { name: "HR Tools & Calculators",href: "/tools" },
+                { name: "Best HRMS Software",    href: "/best-hrms-software-india" },
+                { name: "HRMS Comparisons",      href: "/compare" },
+                { name: "Research Reports",      href: "/reports" },
+                { name: "HR Templates",          href: "/templates" },
             ]
         },
         company: {
             title: "Company",
             items: [
-                { name: "About Us",     href: "/about" },
-
-                { name: "Pricing",      href: "/pricing" },
-                { name: "Contact Us",   href: "/contact-us" },
-                { name: "Support",      href: "/contact-us" },
+                { name: "About Us",          href: "/about" },
+                { name: "HR Niti Entity",    href: "/company/hr-niti" },
+                { name: "Pricing",           href: "/pricing" },
+                { name: "Contact Us",        href: "/contact-us" },
+                { name: "Support",           href: "/contact-us" },
             ]
         }
     };
