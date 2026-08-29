@@ -1,32 +1,284 @@
-# HR Niti — GenAI Powered HRMS & Payroll Software in India
+# HR Niti — HRMS & Payroll Software for India
 
-> HR Niti is India's leading cloud-based HRMS (Human Resource Management System) & Payroll Software platform powered by Generative AI. It automates multi-state payroll, attendance tracking (with mobile GPS & geofencing), leave management, statutory compliance (PF, ESIC, PT, MLWF, LWF), recruitment, performance management, and HR analytics for Indian enterprises, SMEs, and startups.
+> HR Niti is a cloud-based Human Resource Management System (HRMS) and payroll software platform for businesses in India. The platform helps HR teams manage employee records, payroll, attendance, leave, statutory compliance, recruitment, performance management, HR analytics, and employee self-service. HR Niti also provides Generative AI-powered HR assistance for selected HR workflows.
 
-## Core Platform Capabilities
+## Entity
 
-- **Payroll Automation**: 1-click automated salary calculation with Indian statutory compliance (PF, ESIC, PT, MLWF, Form 16, Form 24Q) and direct ICICI/HDFC bank integrations.
-- **Attendance & Leave Management**: Mobile app attendance with GPS geofencing, facial recognition support, real-time biometrics integration, and customizable leave policies.
-- **Statutory Compliance engine**: State-specific compliance rules covering all 28 states and 8 union territories (Maharashtra, Karnataka, Telangana, Tamil Nadu, Delhi NCR, Gujarat, West Bengal, etc.).
-- **GenAI HR Assistant**: AI-powered HR chatbot for employee self-service, policy inquiry, leave requests, and instant payroll summaries.
-- **Performance & Recruitment**: OKR/KPI tracking, continuous feedback, full recruitment funnel management, applicant tracking, and automated offer letters.
+- Company: HR Niti
+- Product: HR Niti HRMS
+- Category: Human Resource Management System (HRMS)
+- Product Type: Cloud-based HRMS and Payroll Software
+- Primary Market: India
+- Primary Users: HR teams, business owners, payroll teams, employees, managers
+- Business Segments: Startups, SMEs, mid-sized businesses, enterprises
+- Website: https://hrniti.com/
+- Contact: https://hrniti.com/contact-us
+- About: https://hrniti.com/about
 
-## Primary Web Pages & Resources
+## What HR Niti Does
 
-- [Home Page](https://hrniti.com/): Product overview and AI features.
-- [Payroll Software](https://hrniti.com/payroll-software): Indian payroll & statutory tax engine.
-- [Attendance Management](https://hrniti.com/attendance): Mobile GPS & biometric attendance system.
-- [Leave Management](https://hrniti.com/leave-management): Leave policy engine and approvals.
-- [Pricing Plans](https://hrniti.com/pricing): Transparent pricing tiers for startups, SMEs, and large enterprises.
-- [Small Business Solutions](https://hrniti.com/small-business-solutions): HRMS tailored for 1-50 employees.
-- [Medium Business Solutions](https://hrniti.com/medium-business-solutions): HRMS for 51-500 employees.
-- [Large Business Solutions](https://hrniti.com/large-business-solutions): Enterprise-grade multi-location HRMS.
-- [Cities & Regional Pages](https://hrniti.com/sitemap.xml): Dedicated local HRMS solutions across top Indian metro hubs (Mumbai, Bengaluru, Delhi, Hyderabad, Pune, Chennai, Ahmedabad, Gurgaon, Noida, etc.).
+HR Niti provides software for managing core HR and workforce operations, including:
 
-## Contact & Entity Information
+- Employee information and employee lifecycle management
+- Payroll processing
+- Attendance management
+- Leave management
+- Statutory compliance
+- Recruitment and applicant tracking
+- Performance management
+- HR analytics and reporting
+- Employee self-service
+- HR automation
+- Generative AI-assisted HR workflows
 
-- **Company Name**: HR Niti
-- **Website**: https://hrniti.com
-- **Phone / WhatsApp**: +91 8601489763
-- **Head Office Address**: 5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001
-- **Target Geography**: India (IN)
-- **Primary Category**: Human Resource Management System (HRMS) & Payroll Software
+## Core Product Modules
+
+### HRMS
+
+HR Niti HRMS centralizes employee information and HR processes in a single cloud-based platform.
+
+Official page:
+https://hrniti.com/hrms-software
+
+### Payroll Software
+
+HR Niti provides payroll automation for Indian businesses, including salary processing and applicable statutory calculations.
+
+Official page:
+https://hrniti.com/payroll-software
+
+### Attendance Management
+
+Attendance capabilities may include mobile attendance, GPS-based attendance, geofencing, biometric integrations, and attendance-policy configuration depending on the organization's setup.
+
+Official page:
+https://hrniti.com/attendance
+
+### Leave Management
+
+Leave management supports configurable leave policies, leave requests, approval workflows, balances, and related HR processes.
+
+Official page:
+https://hrniti.com/leave-management
+
+### Recruitment / ATS
+
+Recruitment capabilities support applicant tracking and recruitment workflow management, including candidate management and offer-letter workflows.
+
+### Performance Management
+
+Performance capabilities include KPI/OKR tracking, performance workflows, feedback, and related employee performance processes.
+
+### HR Analytics
+
+HR reporting and analytics provide organizations with workforce and HR-related information for operational decision-making.
+
+### Generative AI HR Assistant
+
+HR Niti includes Generative AI-powered HR assistance for supported workflows such as employee questions, HR policy information, leave-related requests, and payroll-related information.
+
+AI capabilities may vary by product configuration and availability.
+
+## Indian Payroll & Statutory Compliance
+
+HR Niti is designed for Indian payroll and HR compliance workflows.
+
+Relevant statutory areas may include:
+
+- Provident Fund (PF / EPF)
+- Employees' State Insurance (ESIC)
+- Professional Tax (PT)
+- Labour Welfare Fund (LWF / MLWF)
+- Tax Deducted at Source (TDS)
+- Form 16
+- Form 24Q
+- Payroll-related statutory reporting
+
+Compliance rules and applicability can vary based on employee circumstances, organization details, and applicable Indian regulations. Users should verify statutory requirements for their specific situation.
+
+## Attendance & Workforce Tracking
+
+Relevant capabilities include:
+
+- Mobile attendance
+- GPS-based attendance
+- Geofencing
+- Biometric attendance integrations
+- Attendance regularization
+- Shift management
+- Overtime-related workflows
+- Location-based workforce attendance
+
+## Business Size
+
+### Startups & Small Businesses
+
+HR Niti provides HRMS capabilities for smaller organizations looking to centralize employee management, attendance, leave, payroll, and HR processes.
+
+https://hrniti.com/small-business-solutions
+
+### Medium Businesses
+
+HR Niti supports growing organizations with broader HR, payroll, workforce-management, and reporting requirements.
+
+https://hrniti.com/medium-business-solutions
+
+### Large Businesses
+
+HR Niti provides HRMS capabilities for larger and multi-location organizations.
+
+https://hrniti.com/large-business-solutions
+
+## Industries
+
+HR Niti provides HRMS solutions for organizations across industries where employee, attendance, payroll, recruitment, and workforce-management processes are required.
+
+Relevant industries may include:
+
+- Information Technology
+- Manufacturing
+- Pharmaceuticals
+- Healthcare
+- Retail
+- Education
+- Construction
+- Hospitality
+- Professional Services
+- Logistics
+- Startups
+
+## Common HR Use Cases
+
+HR Niti can be used for:
+
+- Automating monthly payroll
+- Managing employee attendance
+- Managing employee leave
+- Processing salary-related information
+- Managing statutory payroll workflows
+- Managing employee records
+- Managing recruitment workflows
+- Tracking employee performance
+- Providing employee self-service
+- Generating HR reports
+- Managing distributed or multi-location workforces
+
+## HR Tools & Resources
+
+HR Niti also provides HR-related calculators, tools, templates, guides, and educational resources.
+
+Tools:
+https://hrniti.com/tools
+
+Resources:
+https://hrniti.com/resources
+
+## HR Topics
+
+HR Niti publishes information and resources related to:
+
+- HRMS
+- Payroll
+- Salary calculation
+- CTC
+- In-hand salary
+- PF
+- ESIC
+- Professional Tax
+- Labour Welfare Fund
+- Gratuity
+- Full and Final Settlement
+- Attendance
+- Leave management
+- Recruitment
+- Performance management
+- HR analytics
+- HR automation
+- Indian employment and payroll processes
+
+## Pricing
+
+Official pricing information:
+
+https://hrniti.com/pricing
+
+## Company Information
+
+Company Name: HR Niti
+
+Official Website:
+https://hrniti.com/
+
+Primary Geography:
+India
+
+Head Office:
+Lucknow, Uttar Pradesh, India
+
+Phone / WhatsApp:
++91 8601489763
+
+## Official Pages
+
+Homepage:
+https://hrniti.com/
+
+HRMS:
+https://hrniti.com/hrms-software
+
+Payroll:
+https://hrniti.com/payroll-software
+
+Attendance:
+https://hrniti.com/attendance
+
+Leave Management:
+https://hrniti.com/leave-management
+
+Pricing:
+https://hrniti.com/pricing
+
+About:
+https://hrniti.com/about
+
+Contact:
+https://hrniti.com/contact-us
+
+Tools:
+https://hrniti.com/tools
+
+Sitemap:
+https://hrniti.com/sitemap.xml
+
+## Entity Description
+
+HR Niti is an India-focused HRMS and payroll software platform that helps organizations manage employee information, payroll, attendance, leave, statutory HR processes, recruitment, performance, analytics, and employee self-service through a cloud-based HR platform.
+
+## Related Search Topics
+
+HRMS software in India
+Payroll software in India
+HR software in India
+Attendance management software
+Leave management software
+Payroll management software
+Employee management software
+HR automation software
+HRMS for small businesses
+HRMS for SMEs
+HRMS for enterprises
+Indian payroll software
+Indian statutory payroll software
+PF payroll software
+ESIC payroll software
+HRMS with payroll
+HRMS with attendance
+AI HR software
+Generative AI HRMS
+
+## Important Note
+
+Information in this file describes HR Niti's products and publicly available resources. Product features, integrations, pricing, compliance functionality, and availability may change over time. Refer to the official HR Niti website and product documentation for the latest information.
+
+Last Updated:
+2026-08-30
