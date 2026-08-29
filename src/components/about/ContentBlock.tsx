@@ -93,11 +93,11 @@ export default function ContentBlock({
                                 <div className="py-6 border-y border-white/10 text-center sm:text-left space-y-3">
                                     <div className="bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/30 inline-block shadow-xl">
                                         <img
-                                            src="/uploads/1781778053575-HRNITI_LOGO.png"
-                                            alt="HR Niti Official Logo"
+                                            src="/uploads/HRNITI_LOGO_opt.webp"
+                                            alt="HR Niti Logo"
                                             width={220}
                                             height={56}
-                                            className="h-12 sm:h-14 w-auto object-contain"
+                                            className="h-10 sm:h-12 w-auto object-contain"
                                         />
                                     </div>
                                     <p className="text-xs sm:text-sm font-semibold text-emerald-200 uppercase tracking-widest pt-1">

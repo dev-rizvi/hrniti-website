@@ -89,7 +89,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 z-50 relative">
                     <div className="h-10 sm:h-11 max-w-[220px] flex items-center shrink-0">
-                        <img src="/uploads/1781778053575-HRNITI_LOGO.png" alt="HR Niti Logo" width={220} height={44} className="w-full h-full object-contain object-left" />
+                        <img src="/uploads/HRNITI_LOGO_opt.webp" alt="HR Niti Logo" width={220} height={44} className="w-full h-full object-contain object-left" />
                     </div>
                 </Link>
 

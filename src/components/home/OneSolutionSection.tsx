@@ -1,7 +1,4 @@
-"use client";
-import { useEffect, useRef, useState } from "react";
-import { Sparkles, CheckCircle2, X, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { Sparkles, CheckCircle2, X } from "lucide-react";
 
 const problems = [
     { label: "Excel Sheets for Attendance", rotate: -3 },
@@ -35,27 +32,8 @@ const pillars = [
 ];
 
 export default function OneSolutionSection() {
-    const sectionRef = useRef<HTMLDivElement>(null);
-    const [inView, setInView] = useState(false);
-
-    useEffect(() => {
-        const el = sectionRef.current;
-        if (!el) return;
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    setInView(true);
-                    observer.disconnect();
-                }
-            },
-            { threshold: 0.15 }
-        );
-        observer.observe(el);
-        return () => observer.disconnect();
-    }, []);
-
     return (
-        <section ref={sectionRef} className="py-24 bg-white overflow-hidden">
+        <section className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-4 md:px-6">
 
                 {/* Section Header */}
@@ -113,7 +91,7 @@ export default function OneSolutionSection() {
                     <div className="lg:col-span-6">
                         <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-2xl bg-slate-900 group">
                             <img
-                                src="/image/homepage/Centralized-Core-HR.jpg"
+                                src="/image/homepage/Centralized-Core-HR.webp"
                                 alt="Centralized Core HR Platform"
                                 width={800}
                                 height={600}

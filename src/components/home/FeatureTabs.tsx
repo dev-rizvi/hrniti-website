@@ -12,7 +12,7 @@ export default function FeatureTabs() {
             icon: Cloud,
             color: "emerald",
             link: "/payroll-software",
-            imagePath: "/image/homepage/Automated-Payroll.jpg",
+            imagePath: "/image/homepage/Automated-Payroll.webp",
             bullets: ["Bank Payout Excel Generator", "PF, ESIC, PT ECR Generator", "Automated TDS Calculation", "Instant Payslip Delivery"],
         },
         {
@@ -22,7 +22,7 @@ export default function FeatureTabs() {
             icon: Users,
             color: "teal",
             link: "/employee-management",
-            imagePath: "/image/homepage/Centralized-Core-HR.jpg",
+            imagePath: "/image/homepage/Centralized-Core-HR.webp",
             bullets: ["Centralized Employee Master", "Digital Document Vault", "Custom Approval Workflows", "Organisational Hierarchy"],
         },
         {

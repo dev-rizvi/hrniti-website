@@ -85,7 +85,7 @@ export default function IndustriesSection() {
                                 </div>
 
                                 {/* Card Footer CTA */}
-                                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
+                                <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-emerald-800 group-hover:text-emerald-900">
                                     <span>Explore {ind.title} HRMS</span>
                                     <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                 </div>

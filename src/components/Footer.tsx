@@ -198,7 +198,7 @@ export default function Footer() {
                         {/* Logo */}
                         <div>
                             <Link href="/" className="inline-block h-10 sm:h-12 max-w-[220px]">
-                                <img src="/uploads/1781778053575-HRNITI_LOGO.png" alt="HR Niti Logo" width={220} height={48} className="w-full h-full object-contain object-left" />
+                                <img src="/uploads/HRNITI_LOGO_opt.webp" alt="HR Niti Logo" width={220} height={48} className="w-full h-full object-contain object-left" />
                             </Link>
                         </div>
 
@@ -262,7 +262,7 @@ export default function Footer() {
                             <div className="w-8 h-8 bg-emerald-500/20 rounded-lg flex items-center justify-center">
                                 <Zap className="w-4 h-4 text-emerald-400" />
                             </div>
-                            <h4 className="text-white font-semibold text-sm">HR Insights Newsletter</h4>
+                            <div className="text-white font-semibold text-sm">HR Insights Newsletter</div>
                         </div>
                         <p className="text-slate-400 text-[13px] leading-relaxed">
                             Get the latest HR trends, payroll tips &amp; product updates — straight to your inbox.

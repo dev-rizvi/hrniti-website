@@ -44,7 +44,7 @@ export default function OnboardingSteps() {
                                 <div className="w-12 h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center font-bold shrink-0 relative z-10">
                                     <step.icon className="h-6 w-6" />
                                 </div>
-                                <span className="text-4xl font-black text-slate-100">{step.number}</span>
+                                <span className="text-4xl font-black text-slate-300">{step.number}</span>
                             </div>
                             <h3 className="text-lg font-bold text-slate-900 mb-2">{step.title}</h3>
                             <p className="text-sm text-slate-500 leading-relaxed">{step.desc}</p>

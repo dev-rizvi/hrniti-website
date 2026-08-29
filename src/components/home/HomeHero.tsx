@@ -8,10 +8,12 @@ export default function HomeHero() {
             {/* Clearly Visible Full-Width Background Banner */}
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/image/homepage/banner.png"
+                    src="/image/homepage/banner.webp"
                     alt="HR Niti Hero Banner Background"
                     width={1920}
                     height={1080}
+                    // @ts-expecting fetchPriority for LCP optimization
+                    fetchPriority="high"
                     className="w-full h-full object-cover object-center sm:object-right opacity-90"
                 />
                 {/* Left-Side Directional Gradient Overlay */}

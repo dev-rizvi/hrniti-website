@@ -182,14 +182,16 @@ export default function TestimonialSlider() {
                     </button>
 
                     {/* Slide Indicator Dots */}
-                    <div className="flex justify-center items-center gap-2.5 mt-8">
+                    <div className="flex justify-center items-center gap-1 mt-8">
                         {testimonials.map((_, i) => (
                             <button
                                 key={i}
                                 onClick={() => setCurrent(i)}
-                                className={`h-2.5 rounded-full transition-all cursor-pointer ${current === i ? "bg-emerald-600 w-8" : "bg-slate-300 hover:bg-slate-400 w-2.5"}`}
+                                className="p-2 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer select-none"
                                 aria-label={`Go to testimonial ${i + 1}`}
-                            ></button>
+                            >
+                                <span className={`h-2.5 rounded-full transition-all ${current === i ? "bg-emerald-600 w-8" : "bg-slate-300 hover:bg-slate-400 w-2.5"}`}></span>
+                            </button>
                         ))}
                     </div>
                 </div>

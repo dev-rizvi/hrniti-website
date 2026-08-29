@@ -45,7 +45,7 @@ export default function SecuritySection() {
                     <div className="lg:col-span-6">
                         <div className="relative rounded-2xl overflow-hidden border border-emerald-500/30 shadow-2xl bg-slate-950 group">
                             <img
-                                src="/image/homepage/secq-design.jpg"
+                                src="/image/homepage/secq-design.webp"
                                 alt="HR Niti Security Architecture"
                                 width={800}
                                 height={600}
