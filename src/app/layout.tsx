@@ -96,6 +96,72 @@ export default function RootLayout({
             gtag('config', 'G-9R094S1NFG');
           `}
         </Script>
+        {/* Global Entity Schema for AI Engine Optimization (AEO/GEO) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://www.hrniti.com/#organization",
+                name: "HR Niti",
+                alternateName: ["HRNiti", "HR Niti HRMS"],
+                url: "https://www.hrniti.com",
+                logo: "https://www.hrniti.com/uploads/1781778053575-HRNITI_LOGO.png",
+                image: "https://www.hrniti.com/uploads/1781778053575-HRNITI_LOGO.png",
+                description: "HR Niti is an India-focused cloud HRMS and payroll software platform designed for businesses to manage employee records, automated payroll, attendance, leave, recruitment, and statutory compliance.",
+                address: {
+                  "@type": "PostalAddress",
+                  streetAddress: "5/761, Sector 5, Sector 6, Gomti Nagar",
+                  addressLocality: "Lucknow",
+                  addressRegion: "Uttar Pradesh",
+                  postalCode: "226001",
+                  addressCountry: "IN",
+                },
+                contactPoint: {
+                  "@type": "ContactPoint",
+                  telephone: "+91-8601489763",
+                  contactType: "customer service",
+                  areaServed: "IN",
+                  availableLanguage: ["English", "Hindi"],
+                },
+                sameAs: [
+                  "https://www.linkedin.com/company/hrniti",
+                  "https://twitter.com/hrniti",
+                  "https://www.facebook.com/hrniti",
+                ],
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                "@id": "https://www.hrniti.com/#software",
+                name: "HR Niti HRMS & Payroll Software",
+                operatingSystem: "All (Cloud Web-Based & Mobile App)",
+                applicationCategory: "BusinessApplication",
+                url: "https://www.hrniti.com",
+                publisher: {
+                  "@id": "https://www.hrniti.com/#organization",
+                },
+                offers: {
+                  "@type": "AggregateOffer",
+                  priceCurrency: "INR",
+                  lowPrice: "49",
+                  highPrice: "149",
+                  offerCount: "3",
+                },
+                featureList: [
+                  "Indian Payroll Automation & Statutory Compliance (PF, ESIC, PT, MLWF, Form 16)",
+                  "Mobile Attendance Management with GPS Geofencing & Biometrics Integration",
+                  "Automated Leave Management & Policy Rule Engine",
+                  "Full & Final Settlement (F&F) & Gratuity Calculation Engine",
+                  "GenAI HR Assistant & Employee Self-Service (ESS) Portal",
+                  "Performance Management, OKRs, & Recruitment ATS",
+                ],
+              },
+            ]),
+          }}
+        />
         {children}
         <ChatbotWrapper />
       </body>
