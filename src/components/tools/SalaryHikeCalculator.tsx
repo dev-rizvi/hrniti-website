@@ -47,10 +47,14 @@ export default function SalaryHikeCalculator() {
 
     const changePeriod = (next: Period) => {
         if (next === period) return;
-        const factor = next === "monthly" ? 1 / 12 : 12; // going annual->monthly divides, monthly->annual multiplies
         const convert = (v: string) => {
             const n = parseFloat(v);
-            return Number.isFinite(n) ? String(Math.round(n * factor)) : v;
+            if (!Number.isFinite(n)) return v;
+            if (next === "monthly") {
+                return (n / 12).toFixed(2).replace(/\.00$/, "");
+            } else {
+                return Math.round(n * 12).toString();
+            }
         };
         setCurrentInput((v) => convert(v));
         setNewInput((v) => convert(v));
@@ -195,8 +199,16 @@ export default function SalaryHikeCalculator() {
                     <div className="flex items-center gap-2 text-emerald-700 font-bold text-sm uppercase tracking-wide mb-4">
                         <Calculator className="h-4 w-4" /> Result
                     </div>
-                    <div className="text-4xl font-bold text-slate-900 mb-1">{result.percent.toFixed(1)}% Hike</div>
-                    <div className="text-sm text-slate-500 mb-6">{formatINR(result.hikeAmountAnnual)} increase per year</div>
+                    <div className="text-4xl font-bold text-slate-900 mb-1">
+                        {result.percent % 1 === 0 
+                            ? result.percent.toFixed(0) 
+                            : (Math.round(result.percent * 100) / 100).toString()}% Hike
+                    </div>
+                    <div className="text-sm text-slate-500 mb-6">
+                        {period === "monthly"
+                            ? `${formatINR(result.hikeAmountMonthly)} increase per month (${formatINR(result.hikeAmountAnnual)}/yr)`
+                            : `${formatINR(result.hikeAmountAnnual)} increase per year`}
+                    </div>
 
                     <div className="grid grid-cols-2 gap-4 text-sm text-emerald-900/80 pt-4 border-t border-emerald-100">
                         <div>
