@@ -95,6 +95,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${BASE_URL}/partners`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
         { url: `${BASE_URL}/demo`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
 
+        // Entity, Comparisons & AI Knowledge Layer
+        { url: `${BASE_URL}/company/hr-niti`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+        { url: `${BASE_URL}/best-hrms-software-india`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+        { url: `${BASE_URL}/compare`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+        { url: `${BASE_URL}/hrniti-vs-keka-hr`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${BASE_URL}/hrniti-vs-greythr`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${BASE_URL}/hrniti-vs-zoho-payroll`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${BASE_URL}/hrniti-vs-hrone`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+        { url: `${BASE_URL}/hrniti-vs-pagarbook`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+
         // Resources & Content
         { url: `${BASE_URL}/templates`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
 

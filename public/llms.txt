@@ -36,7 +36,12 @@
 ## Comparison Guides & Entity Knowledge
 
 - [Best HRMS Software in India](https://www.hrniti.com/best-hrms-software-india): Objective 2026 comparison guide and feature matrix of top HRMS software platforms in India.
-- [HRMS Software Comparisons Hub](https://www.hrniti.com/compare): Head-to-head comparisons of HR Niti vs Keka, greytHR, Zoho People, and Darwinbox.
+- [HRMS Software Comparisons Hub](https://www.hrniti.com/compare): Head-to-head comparisons of HR Niti vs Keka, greytHR, Zoho Payroll, HROne, and PagarBook.
+- [HR Niti vs Keka HR](https://www.hrniti.com/hrniti-vs-keka-hr): Objective feature, mobile attendance, and pricing comparison between HR Niti and Keka HR.
+- [HR Niti vs greytHR](https://www.hrniti.com/hrniti-vs-greythr): Detailed comparison of HR Niti vs greytHR for Indian payroll, employee self-service, and compliance.
+- [HR Niti vs Zoho Payroll](https://www.hrniti.com/hrniti-vs-zoho-payroll): Compare HR Niti and Zoho Payroll / Zoho People on unified HRMS, mobile GPS attendance, and state tax rules.
+- [HR Niti vs HROne](https://www.hrniti.com/hrniti-vs-hrone): Feature and mobile usability analysis comparing HR Niti and HROne HR software.
+- [HR Niti vs PagarBook](https://www.hrniti.com/hrniti-vs-pagarbook): Comparison of basic micro-wage apps vs HR Niti's complete statutory HRMS & payroll platform.
 - [HR Niti Official Entity Overview](https://www.hrniti.com/company/hr-niti): Technical specifications, entity profile, and facts table for HR Niti.
 - [HR Glossary Dictionary](https://www.hrniti.com/resources/hr-glossary): Comprehensive dictionary of Indian HR, payroll, labor law, and compliance terminology.
 
