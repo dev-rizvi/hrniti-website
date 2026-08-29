@@ -130,6 +130,18 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
 
             <section className="py-16 bg-slate-50">
                 <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    {/* Freshness Audit Block */}
+                    <div className="bg-emerald-50/90 border border-emerald-200/90 rounded-2xl p-4 mb-8 text-xs text-emerald-950 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-2xs">
+                        <div className="flex flex-wrap items-center gap-2">
+                            <span className="bg-emerald-700 text-white font-extrabold text-[10px] px-2.5 py-1 rounded-md uppercase tracking-wider shrink-0">
+                                Last Updated: August 2026
+                            </span>
+                            <span className="font-semibold text-slate-700">
+                                Reviewed periodically to reflect Indian gratuity &amp; social-security rules under the Code on Social Security, 2020 (enforced 21 Nov 2025).
+                            </span>
+                        </div>
+                    </div>
+
                     {CalculatorComponent && <CalculatorComponent />}
                 </div>
             </section>
@@ -140,7 +152,7 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                         {tool.sections.map((section) => (
                             <div key={section.heading}>
                                 <h2 className="text-xl font-bold text-slate-900 mb-3">{section.heading}</h2>
-                                <p className="text-slate-600 leading-relaxed">{section.body}</p>
+                                <div className="text-slate-600 leading-relaxed space-y-3 whitespace-pre-line">{section.body}</div>
                             </div>
                         ))}
                     </div>
@@ -158,7 +170,39 @@ export default async function ToolPage({ params }: { params: Promise<{ slug: str
                 </section>
             )}
 
-            <section className="py-10 bg-white text-center">
+            {/* Related Compensation Calculator Cluster Section */}
+            <section className="py-16 bg-white border-t border-slate-100">
+                <div className="container mx-auto px-4 md:px-6 max-w-4xl">
+                    <h2 className="text-2xl font-extrabold text-slate-900 mb-2 text-center">
+                        Related HR &amp; Salary Calculators
+                    </h2>
+                    <p className="text-xs md:text-sm text-slate-500 text-center mb-8">
+                        Explore HR Niti&apos;s coherent employee-compensation calculator suite for Indian payroll &amp; statutory compliance.
+                    </p>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                        {[
+                            { name: "Salary Hike Calculator", href: "/tools/salary-hike-calculator", desc: "Calculate increment % & new annual/monthly CTC" },
+                            { name: "Leave Encashment Calculator", href: "/tools/leave-encashment-calculator", desc: "Estimate payout for unused earned leave" },
+                            { name: "Gratuity Calculator", href: "/tools/gratuity-calculator", desc: "Code on Social Security 2020 gratuity estimation" },
+                            { name: "Salary Calculator", href: "/tools", desc: "Structure Basic, HRA & allowances for employees" },
+                            { name: "In-Hand Salary Calculator", href: "/tools", desc: "Calculate monthly net take-home salary after taxes" },
+                            { name: "CTC & PF Calculator", href: "/tools", desc: "Calculate total Cost to Company & employer PF" }
+                        ].map((item) => (
+                            <Link
+                                key={item.name}
+                                href={item.href}
+                                className="bg-slate-50 hover:bg-emerald-50/60 border border-slate-200/80 hover:border-emerald-300 rounded-xl p-4 transition-all duration-200 group"
+                            >
+                                <h3 className="text-sm font-bold text-slate-900 group-hover:text-emerald-700 mb-1">{item.name}</h3>
+                                <p className="text-xs text-slate-500 line-clamp-2 leading-relaxed">{item.desc}</p>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            <section className="py-8 bg-slate-50 text-center border-t border-slate-100">
                 <Link href="/tools" className="text-sm font-bold text-slate-600 hover:text-emerald-600 transition-colors">
                     ← Back to All Tools
                 </Link>
