@@ -267,7 +267,7 @@ export default function SettingsDashboard() {
                       required
                       value={settings.email}
                       onChange={(e) => setSettings({ ...settings, email: e.target.value })}
-                      placeholder="e.g. sales@hrniti.com"
+                      placeholder="e.g. support@hrniti.com"
                       className="w-full rounded-xl border border-slate-200 bg-slate-50/50 px-4 py-3 text-sm text-slate-850 outline-none focus:bg-white focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-medium"
                     />
                   </div>

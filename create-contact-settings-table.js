@@ -41,7 +41,7 @@ async function createContactSettingsTable() {
           1,
           '+91 8601489763',
           '+91 8601489763',
-          'sales@hrniti.com',
+          'support@hrniti.com',
           '5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001',
           'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.8037305986877!2d73.01819381489912!3d19.072346987088463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c13bf63f25c7%3A0xe54d9243ab03576!2sEverest%20Nivara%20Infotech%20Park!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin'
       ) ON CONFLICT (id) DO UPDATE SET

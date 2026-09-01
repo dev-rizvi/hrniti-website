@@ -13,7 +13,7 @@ export const revalidate = 3600;
 
 export const metadata: Metadata = {
     title: "Contact Us - HR Niti | Head Office Lucknow",
-    description: "Contact HR Niti for HR and payroll software solutions. Call us at +91 8601489763 or email sales@hrniti.com. Head Office: 5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001.",
+    description: "Contact HR Niti for HR and payroll software solutions. Call us at +91 8601489763 or email support@hrniti.com. Head Office: 5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001.",
     keywords: "contact HR Niti, HR software support, payroll software inquiry, demo request, HR Niti Lucknow office",
     alternates: { canonical: `${BASE_URL}/contact-us` },
 };

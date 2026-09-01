@@ -189,7 +189,7 @@ function WelcomeContent() {
         <div className="grid grid-cols-3 gap-2 mt-6 pt-5 border-t border-slate-100 text-center text-[10px] font-bold text-slate-500">
           <div className="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50">
             <Clock className="w-4 h-4 text-indigo-600" />
-            <span>14 Days Full Access</span>
+            <span>7 Days Free Trial (Auto-Pay)</span>
           </div>
           <div className="flex flex-col items-center gap-1 p-2 rounded-xl bg-slate-50">
             <ShieldCheck className="w-4 h-4 text-emerald-600" />

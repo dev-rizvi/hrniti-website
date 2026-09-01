@@ -6,7 +6,9 @@ const cspHeader = `
     style-src 'self' 'unsafe-inline' https:;
     img-src 'self' data: blob: https:;
     font-src 'self' data: https:;
-    connect-src 'self' https: ws: wss:;
+    frame-src 'self' https: data: blob: https://*.razorpay.com https://api.razorpay.com https://checkout.razorpay.com https://rzp.io https://*.google.com https://www.google.com https://maps.google.com https://*.youtube.com https://www.youtube.com;
+    child-src 'self' blob: https: https://*.razorpay.com https://*.google.com;
+    connect-src 'self' https: http://127.0.0.1:* http://localhost:* ws: wss:;
     frame-ancestors 'self';
     object-src 'none';
     base-uri 'self';
@@ -48,9 +50,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
-      // Legacy/alias routes — send both users and search engines straight to the
-      // canonical page with a permanent (308) redirect instead of rendering a
-      // client-side redirect page for each one.
+      // Legacy/alias routes
       { source: "/login", destination: "/admin/login", permanent: true },
       { source: "/contact", destination: "/contact-us", permanent: true },
       { source: "/expense-management", destination: "/expense-management-software", permanent: true },

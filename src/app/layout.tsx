@@ -97,6 +97,15 @@ export default function RootLayout({
             gtag('config', 'G-9R094S1NFG');
           `}
         </Script>
+        <Script id="microsoft-clarity" strategy="afterInteractive">
+          {`
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "ybdlez4c1w");
+          `}
+        </Script>
         {/* Global Entity Schema for AI Engine Optimization (AEO/GEO) */}
         <script
           type="application/ld+json"
@@ -128,10 +137,9 @@ export default function RootLayout({
                   availableLanguage: ["English", "Hindi"],
                 },
                 sameAs: [
-                  "https://www.linkedin.com/company/hrniti",
-                  "https://twitter.com/hrniti",
-                  "https://www.facebook.com/hrniti",
-                ],
+                    "https://www.linkedin.com/company/hrniti/",
+                    "https://www.instagram.com/hr_niti/",
+                  ],
               },
               {
                 "@context": "https://schema.org",

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import {
-    Facebook, Twitter, Linkedin, Instagram, Youtube,
+    Linkedin, Instagram,
     Shield, Lock, CheckCircle2, MapPin, Phone, Mail,
     ArrowRight, Zap
 } from "lucide-react";
@@ -132,33 +132,15 @@ export default function Footer() {
     const socialLinks = [
         {
             title: "LinkedIn",
-            href: settings?.linkedin_url || "https://www.linkedin.com/",
+            href: settings?.linkedin_url || "https://www.linkedin.com/company/hrniti/",
             icon: <Linkedin className="w-4 h-4" />,
             color: "hover:bg-[#0A66C2] hover:border-[#0A66C2]"
         },
         {
             title: "Instagram",
-            href: settings?.instagram_url || "https://www.instagram.com/",
+            href: settings?.instagram_url || "https://www.instagram.com/hr_niti/",
             icon: <Instagram className="w-4 h-4" />,
             color: "hover:bg-gradient-to-br hover:from-[#833ab4] hover:via-[#fd1d1d] hover:to-[#fcb045] hover:border-[#fd1d1d]"
-        },
-        {
-            title: "YouTube",
-            href: "https://www.youtube.com/",
-            icon: <Youtube className="w-4 h-4" />,
-            color: "hover:bg-[#FF0000] hover:border-[#FF0000]"
-        },
-        {
-            title: "Twitter / X",
-            href: settings?.twitter_url || "https://twitter.com/",
-            icon: <Twitter className="w-4 h-4" />,
-            color: "hover:bg-[#1DA1F2] hover:border-[#1DA1F2]"
-        },
-        {
-            title: "Facebook",
-            href: settings?.facebook_url || "https://www.facebook.com/",
-            icon: <Facebook className="w-4 h-4" />,
-            color: "hover:bg-[#1877F2] hover:border-[#1877F2]"
         },
         {
             title: "WhatsApp",
@@ -169,7 +151,7 @@ export default function Footer() {
                 </svg>
             ),
             color: "hover:bg-[#25D366] hover:border-[#25D366]"
-        },
+        }
     ];
 
     return (
@@ -193,64 +175,104 @@ export default function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-14">
 
                     {/* Brand block */}
-                    <div className="lg:col-span-2 space-y-5">
+                    <div className="lg:col-span-2 space-y-6">
                         {/* Logo */}
-                        <div>
-                            <Link href="/" className="inline-block h-10 sm:h-12 max-w-[220px]">
-                                <img src="/uploads/HRNITI_LOGO_opt.webp" alt="HR Niti Logo" width={220} height={48} className="w-full h-full object-contain object-left" />
+                        <div className="flex items-center">
+                            <Link href="/" className="inline-block h-9 sm:h-10 max-w-[190px] transition-transform hover:opacity-95">
+                                <img 
+                                    src="/uploads/HRNITI_LOGO_opt.webp" 
+                                    alt="HR Niti Logo" 
+                                    width={190} 
+                                    height={40} 
+                                    className="w-full h-full object-contain object-left" 
+                                />
                             </Link>
                         </div>
 
                         {/* Tagline */}
-                        <p className="text-[15px] leading-relaxed text-slate-400 max-w-lg">
+                        <p className="text-[14px] leading-relaxed text-slate-400 max-w-lg">
                             India&apos;s leading <span className="text-emerald-400 font-medium">AI-powered HRMS &amp; Payroll platform</span> — simplifying workforce management, payroll compliance, and employee engagement for modern businesses.
                         </p>
 
-                        {/* Contact info row */}
-                        <div className="flex flex-col sm:flex-row flex-wrap gap-4 text-sm">
-                            <a href="tel:+918601489763" className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors">
-                                <Phone className="w-4 h-4 text-emerald-500 shrink-0" />
-                                <span>+91 8601489763</span>
-                            </a>
-                            <a href={`mailto:${settings?.email || "sales@hrniti.com"}`} className="flex items-center gap-2 text-slate-400 hover:text-emerald-400 transition-colors">
-                                <Mail className="w-4 h-4 text-emerald-500 shrink-0" />
-                                <span>{settings?.email || "sales@hrniti.com"}</span>
-                            </a>
-                            <span className="flex items-start gap-2 text-slate-400">
-                                <MapPin className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
-                                <span>5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001</span>
-                            </span>
-                        </div>
-
-                        {/* Social Icons */}
-                        <div className="flex flex-wrap gap-2.5 pt-1">
-                            {socialLinks.map((s) => (
-                                <a
-                                    key={s.title}
-                                    href={s.href}
-                                    target="_blank"
-                                    rel="noopener noreferrer nofollow"
-                                    title={s.title}
-                                    className={`w-9 h-9 rounded-lg border border-slate-700 bg-slate-800/50 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 ${s.color}`}
-                                >
-                                    {s.icon}
+                        {/* Contact info & Social row */}
+                        <div className="space-y-3 pt-0.5">
+                            <div className="flex flex-col sm:flex-row flex-wrap gap-y-2 gap-x-5 text-[13px]">
+                                <a href="tel:+918601489763" className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors">
+                                    <Phone className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                                    <span>+91 8601489763</span>
                                 </a>
-                            ))}
+                                <a href="mailto:support@hrniti.com" className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors">
+                                    <Mail className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                                    <span>support@hrniti.com</span>
+                                </a>
+                            </div>
+                            <div className="flex items-start gap-2 text-[13px] text-slate-400 max-w-lg">
+                                <MapPin className="w-3.5 h-3.5 text-emerald-500 shrink-0 mt-0.5" />
+                                <span>5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001</span>
+                            </div>
+
+                            {/* Social Icons */}
+                            <div className="flex flex-wrap gap-2 pt-1">
+                                {socialLinks.map((s) => (
+                                    <a
+                                        key={s.title}
+                                        href={s.href}
+                                        target="_blank"
+                                        rel="noopener noreferrer nofollow"
+                                        title={s.title}
+                                        className={`w-8 h-8 rounded-lg border border-slate-700/80 bg-slate-800/60 flex items-center justify-center text-slate-400 hover:text-white transition-all duration-300 ${s.color}`}
+                                    >
+                                        {s.icon}
+                                    </a>
+                                ))}
+                            </div>
                         </div>
 
-                        {/* Trust badges */}
-                        <div className="flex flex-wrap gap-3 pt-2">
-                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/60 border border-slate-700/60 text-[11px] font-semibold text-slate-300">
-                                <Shield className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
-                                <span>256-Bit SSL</span>
-                            </div>
-                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/60 border border-slate-700/60 text-[11px] font-semibold text-slate-300">
-                                <Lock className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-                                <span>Encrypted DB</span>
-                            </div>
-                            <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/60 border border-slate-700/60 text-[11px] font-semibold text-slate-300">
-                                <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
-                                <span>GDPR Compliant</span>
+                        {/* Security & Certifications Card */}
+                        <div className="pt-2">
+                            <div className="p-4 sm:p-5 rounded-2xl bg-slate-900/80 border border-slate-800 shadow-lg max-w-xl space-y-4">
+                                <div className="text-xs font-semibold uppercase tracking-wider text-slate-300 flex items-center gap-2">
+                                    <Shield className="w-4 h-4 text-emerald-400" />
+                                    <span>Enterprise Security &amp; Compliance</span>
+                                </div>
+
+                                {/* Certification Logos - Larger & Highly Visible */}
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <div 
+                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16" 
+                                        title="AICPA SOC Certification"
+                                    >
+                                        <img src="/image/imgg1.png" alt="AICPA SOC Certification" className="h-10 sm:h-11 w-auto object-contain" />
+                                    </div>
+                                    <div 
+                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16" 
+                                        title="ISO 27001 Certification"
+                                    >
+                                        <img src="/image/imgg2.png" alt="ISO 27001 Certification" className="h-10 sm:h-11 w-auto object-contain" />
+                                    </div>
+                                    <div 
+                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16" 
+                                        title="ISO 9001:2015 Certification"
+                                    >
+                                        <img src="/image/imgg3.png" alt="ISO 9001:2015 Certification" className="h-10 sm:h-11 w-auto object-contain" />
+                                    </div>
+                                </div>
+
+                                {/* Security Tags */}
+                                <div className="flex flex-wrap gap-2 pt-1 border-t border-slate-800/80">
+                                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-[11px] font-medium text-slate-300">
+                                        <Shield className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                                        <span>256-Bit SSL</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-[11px] font-medium text-slate-300">
+                                        <Lock className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+                                        <span>Encrypted DB</span>
+                                    </div>
+                                    <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-800/90 border border-slate-700/70 text-[11px] font-medium text-slate-300">
+                                        <CheckCircle2 className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+                                        <span>GDPR Compliant</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

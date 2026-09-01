@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 export default async function DemoPage() {
   let packages: any[] = [];
   let addons: any[] = [];
-  let demoDays: number = 14;
+  let demoDays: number = 7;
   let currencySymbol: string = "₹";
   let razorpayEnabled: boolean = false;
   let razorpayKey: string | null = null;
@@ -60,7 +60,7 @@ export default async function DemoPage() {
     const res = await fetch(demoSettingsUrl, { cache: "no-store" });
     if (res.ok) {
       const data = await res.json();
-      demoDays = data.demo_days || 14;
+      demoDays = data.demo_days || 7;
       if (data.currency_symbol) currencySymbol = data.currency_symbol;
       if (data.razorpay_enabled) razorpayEnabled = data.razorpay_enabled;
       if (data.razorpay_key) razorpayKey = data.razorpay_key;

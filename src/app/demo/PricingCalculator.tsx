@@ -36,7 +36,7 @@ import {
   Plus,
   Minus
 } from "lucide-react";
-import { createContactInquiry, validateContactInquiry } from "./actions";
+import { createContactInquiry, validateContactInquiry, createDemoSubscription } from "./actions";
 import { jsPDF } from "jspdf";
 import { toPng } from "html-to-image";
 import Script from "next/script";
@@ -353,11 +353,77 @@ export default function PricingCalculator({
     formData.append("email", email.trim());
     formData.append("phone", phone.trim());
     formData.append("package", (currentPlan?.raw_db_id || currentPlan?.id || "").toString());
-    formData.append("billing", type === "demo" ? "demo" : "yearly");
+    formData.append("billing", type === "demo" ? "yearly_autopay" : "yearly");
+    formData.append("trial_days", type === "demo" ? "7" : "0");
+    formData.append("is_autopay", type === "demo" ? "true" : "false");
     formData.append("team_size", teamSize.toString());
     formData.append("selected_addons", JSON.stringify(selectedAddonIds));
     formData.append("estimated_total", calculations.finalDisplayTotal.toString());
 
+    // 1. AUTO-PAY MANDATE FLOW FOR 7-DAY FREE TRIAL
+    if (type === "demo") {
+      if (razorpayEnabled && razorpayKey) {
+        const validation = await validateContactInquiry(formData);
+        if (!validation.success) {
+          if (validation.fieldErrors) setFieldErrors(validation.fieldErrors);
+          setFormError(validation.error || "Validation failed. Please verify your details.");
+          setIsLoading(false);
+          setActiveAction(null);
+          return;
+        }
+
+        try {
+          const subRes = await createDemoSubscription(formData);
+          if (subRes && subRes.success && subRes.subscription_id) {
+            formData.append("razorpay_subscription_id", subRes.subscription_id);
+
+            if ((window as any).Razorpay) {
+              const options = {
+                key: subRes.razorpay_key || razorpayKey,
+                subscription_id: subRes.subscription_id,
+                name: "HR Niti HRMS",
+                description: "7-Day Free Trial + Yearly Auto-Pay (" + currentPlan?.name + ")",
+                handler: async function (response: any) {
+                  if (response.razorpay_payment_id) formData.append("razorpay_payment_id", response.razorpay_payment_id);
+                  if (response.razorpay_subscription_id) formData.append("razorpay_subscription_id", response.razorpay_subscription_id);
+                  if (response.razorpay_signature) formData.append("razorpay_signature", response.razorpay_signature);
+                  executeCreation(formData);
+                },
+                prefill: { name: fullName, email: email, contact: phone },
+                theme: { color: "#4f46e5" },
+                modal: { 
+                  ondismiss: () => {
+                    setIsLoading(false);
+                    setActiveAction(null);
+                  }
+                }
+              };
+
+              try {
+                const rzp = new (window as any).Razorpay(options);
+                rzp.on("payment.failed", (resp: any) => {
+                  console.warn("Razorpay mandate popup warning:", resp);
+                  // Fallback: Proceed with created trial subscription
+                  executeCreation(formData);
+                });
+                rzp.open();
+                return;
+              } catch (rzpOpenErr) {
+                console.warn("Razorpay iframe blocked by browser, continuing direct creation:", rzpOpenErr);
+              }
+            }
+          }
+        } catch (subErr) {
+          console.warn("Auto-Pay subscription creation error:", subErr);
+        }
+      }
+
+      // Proceed with 7-Day trial workspace setup
+      executeCreation(formData);
+      return;
+    }
+
+    // 2. DIRECT ONE-TIME YEARLY PURCHASE FLOW
     if (type === "buy" && razorpayEnabled && razorpayKey) {
       const validation = await validateContactInquiry(formData);
       if (!validation.success) {
@@ -380,7 +446,7 @@ export default function PricingCalculator({
         key: razorpayKey,
         amount: amountInPaise,
         currency: "INR",
-        name: "HRMS Software",
+        name: "HR Niti HRMS",
         description: "Yearly Plan: " + currentPlan?.name + " (" + teamSize + " Employees)",
         handler: async function (response: any) {
           formData.append("razorpay_payment_id", response.razorpay_payment_id);
@@ -396,13 +462,19 @@ export default function PricingCalculator({
         }
       };
 
-      const rzp = new (window as any).Razorpay(options);
-      rzp.on("payment.failed", (resp: any) => {
-        setFormError("Payment failed: " + resp.error.description);
+      try {
+        const rzp = new (window as any).Razorpay(options);
+        rzp.on("payment.failed", (resp: any) => {
+          setFormError("Payment failed: " + resp.error.description);
+          setIsLoading(false);
+          setActiveAction(null);
+        });
+        rzp.open();
+      } catch (err) {
+        setFormError("Unable to open payment modal: " + String(err));
         setIsLoading(false);
         setActiveAction(null);
-      });
-      rzp.open();
+      }
     } else {
       executeCreation(formData);
     }
@@ -974,20 +1046,42 @@ export default function PricingCalculator({
               </div>
 
               {/* Step 4 Actions */}
-              <div className="space-y-3 pt-2">
+              <div className="space-y-4 pt-2">
+                
+                {/* Auto-Pay Guarantee & Trial Information Notice */}
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-emerald-50 via-teal-50 to-indigo-50 border border-emerald-200/80 shadow-xs space-y-2">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-black text-emerald-950 flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                      7-Day Free Trial • Auto-Pay Annual Plan
+                    </span>
+                    <span className="text-[10px] font-black uppercase tracking-wider bg-emerald-600 text-white px-2.5 py-0.5 rounded-full shadow-xs">
+                      ₹0 Charged Today
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-emerald-900 leading-relaxed font-medium">
+                    Start your <strong>7-Day Free Trial</strong> with full feature access at ₹0 today. After 7 days, your annual subscription of <strong>{currencySymbol}{calculations.finalDisplayTotal.toLocaleString()}/year</strong> will be auto-debited. You can easily cancel anytime before Day 7 with zero cancellation fees.
+                  </p>
+                </div>
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <button
                     type="button"
                     disabled={isLoading}
                     onClick={() => handleProceed("demo")}
-                    className="py-4 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shadow-md shadow-slate-900/20 hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="py-3.5 px-4 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shadow-md shadow-slate-900/20 hover:shadow-lg transition-all flex flex-col items-center justify-center gap-0.5 cursor-pointer disabled:opacity-50"
                   >
                     {isLoading && activeAction === "demo" ? (
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin my-1" />
                     ) : (
                       <>
-                        <Calendar className="w-4 h-4 text-emerald-400" />
-                        <span>Start {demoDays}-Day Free Demo</span>
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-4 h-4 text-emerald-400" />
+                          <span>Start 7-Day Free Trial (Auto-Pay)</span>
+                        </div>
+                        <span className="text-[10px] text-emerald-300 font-semibold">
+                          ₹0 today • Auto-debit after 7 days
+                        </span>
                       </>
                     )}
                   </button>
@@ -996,20 +1090,25 @@ export default function PricingCalculator({
                     type="button"
                     disabled={isLoading}
                     onClick={() => handleProceed("buy")}
-                    className="py-4 px-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-black text-xs shadow-md shadow-indigo-600/20 hover:shadow-lg transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                    className="py-3.5 px-4 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-black text-xs shadow-md shadow-indigo-600/20 hover:shadow-lg transition-all flex flex-col items-center justify-center gap-0.5 cursor-pointer disabled:opacity-50"
                   >
                     {isLoading && activeAction === "buy" ? (
-                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                      <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin my-1" />
                     ) : (
                       <>
-                        <Zap className="w-4 h-4 text-yellow-300" />
-                        <span>Buy Yearly Subscription</span>
+                        <div className="flex items-center gap-1.5">
+                          <Zap className="w-4 h-4 text-yellow-300" />
+                          <span>Buy Yearly Subscription</span>
+                        </div>
+                        <span className="text-[10px] text-purple-200 font-semibold">
+                          Pay {currencySymbol}{calculations.finalDisplayTotal.toLocaleString()} & Activate Now
+                        </span>
                       </>
                     )}
                   </button>
                 </div>
 
-                <div className="flex items-center justify-between pt-2">
+                <div className="flex items-center justify-between pt-1">
                   <button
                     type="button"
                     onClick={() => setCurrentStep(3)}
@@ -1020,7 +1119,7 @@ export default function PricingCalculator({
                   </button>
 
                   <span className="text-[11px] font-semibold text-slate-400">
-                    Instant portal credentials generated upon submit
+                    ⚡ Instant portal credentials generated upon setup
                   </span>
                 </div>
               </div>

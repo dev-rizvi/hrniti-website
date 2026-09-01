@@ -54,9 +54,9 @@ export default async function AboutPage() {
                 url: "https://www.hrniti.com",
                 logo: "https://www.hrniti.com/uploads/1781778053575-HRNITI_LOGO.png",
                 sameAs: [
-                    "https://www.linkedin.com/company/hrniti",
-                    "https://twitter.com/hrniti"
-                ]
+                    "https://www.linkedin.com/company/hrniti/",
+                    "https://www.instagram.com/hr_niti/"
+                  ]
             }
         }
     ];
