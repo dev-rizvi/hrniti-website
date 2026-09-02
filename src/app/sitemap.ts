@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { createClient } from "@supabase/supabase-js";
 import { prisma } from "@/lib/prisma";
 import { industries } from "@/lib/industriesData";
 import { tools } from "@/lib/toolsData";
@@ -6,6 +7,10 @@ import { glossaryTerms } from "@/lib/glossaryData";
 import { cityList } from "@/data/cityData";
 
 const BASE_URL = "https://www.hrniti.com";
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://tpfkfjlpafhlfaovrern.supabase.co';
+const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'sb_publishable_bNRrR39A0REONQBYJIWQJg_2SME02mj';
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const now = new Date();
@@ -29,13 +34,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     let blogRoutes: MetadataRoute.Sitemap = [];
 
     try {
-        const blogs = await prisma.blog.findMany({
-            where: { published: true },
-            select: { slug: true, updated_at: true, created_at: true },
-        });
-        blogRoutes = blogs.map((b) => ({
+        const { data: blogsData, error: sbErr } = await supabase
+            .from('blogs')
+            .select('slug, updated_at, created_at')
+            .eq('published', true);
+
+        let blogs = blogsData;
+        if (sbErr || !blogs || blogs.length === 0) {
+            blogs = await prisma.blog.findMany({
+                where: { published: true },
+                select: { slug: true, updated_at: true, created_at: true },
+            });
+        }
+        blogRoutes = (blogs || []).map((b: any) => ({
             url: `${BASE_URL}/blog/${b.slug}`,
-            lastModified: b.updated_at ?? b.created_at ?? now,
+            lastModified: b.updated_at ? new Date(b.updated_at) : (b.created_at ? new Date(b.created_at) : now),
             changeFrequency: "weekly" as const,
             priority: 0.8,
         }));

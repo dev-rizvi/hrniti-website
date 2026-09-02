@@ -34,8 +34,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
             description,
             url,
             type: 'article',
-            publishedTime: blog.created_at.toISOString(),
-            modifiedTime: blog.updated_at.toISOString(),
+            publishedTime: blog.created_at ? new Date(blog.created_at).toISOString() : new Date().toISOString(),
+            modifiedTime: blog.updated_at ? new Date(blog.updated_at).toISOString() : (blog.created_at ? new Date(blog.created_at).toISOString() : new Date().toISOString()),
             authors: [blog.author || 'HR Niti Team'],
             images: blog.featured_image ? [{ url: blog.featured_image, alt: blog.title }] : [{ url: '/og-default.png', width: 1200, height: 630 }],
         },
@@ -91,8 +91,8 @@ export default async function BlogPostViewerPage({ params }: { params: Promise<{
                         headline: blog.title,
                         description: blog.summary,
                         image: blog.featured_image ? [blog.featured_image] : undefined,
-                        datePublished: blog.created_at.toISOString(),
-                        dateModified: blog.updated_at.toISOString(),
+                        datePublished: blog.created_at ? new Date(blog.created_at).toISOString() : new Date().toISOString(),
+                        dateModified: blog.updated_at ? new Date(blog.updated_at).toISOString() : (blog.created_at ? new Date(blog.created_at).toISOString() : new Date().toISOString()),
                         author: {
                             "@type": "Person",
                             name: blog.author || "HR Niti Team"
