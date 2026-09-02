@@ -10,11 +10,16 @@ import {
   List, 
   ListOrdered, 
   Link, 
+  Link2,
   Image, 
   Code, 
   Eye, 
-  Trash2 
+  Trash2,
+  ChevronDown,
+  Search,
+  Check
 } from 'lucide-react';
+import { INTERNAL_LINK_TARGETS } from '@/lib/internalLinksData';
 
 interface RichTextEditorProps {
   value: string;
@@ -25,6 +30,9 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
   const editorRef = useRef<HTMLDivElement>(null);
   const [isCodeView, setIsCodeView] = useState(false);
   const [htmlValue, setHtmlValue] = useState(value);
+  const [showRoutePicker, setShowRoutePicker] = useState(false);
+  const [routeSearch, setRouteSearch] = useState('');
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Sync internal editor element with value from parent
   useEffect(() => {
@@ -151,10 +159,74 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
           type="button"
           onClick={addLink}
           className="p-1.5 hover:bg-slate-200 text-slate-700 rounded transition-colors"
-          title="Insert Link"
+          title="Custom URL Link"
         >
           <Link className="h-4 w-4" />
         </button>
+
+        {/* Website Route Internal Linker Popover */}
+        <div className="relative">
+          <button
+            type="button"
+            onClick={() => setShowRoutePicker(!showRoutePicker)}
+            className={`px-2 py-1 hover:bg-emerald-100 text-emerald-800 rounded-lg text-xs font-bold transition-all flex items-center gap-1 border ${
+              showRoutePicker ? 'bg-emerald-100 border-emerald-300' : 'bg-emerald-50 border-emerald-200'
+            }`}
+            title="Link selected text to an HR Niti website page"
+          >
+            <Link2 className="h-3.5 w-3.5 text-emerald-700" />
+            <span>Site Route</span>
+            <ChevronDown className="h-3 w-3 text-emerald-600" />
+          </button>
+
+          {showRoutePicker && (
+            <div 
+              ref={dropdownRef}
+              className="absolute left-0 top-full mt-1.5 w-72 bg-white rounded-2xl shadow-xl border border-slate-200 z-50 p-2 text-xs font-sans animate-fadeIn"
+            >
+              <div className="flex items-center gap-1.5 px-2 py-1.5 bg-slate-50 rounded-xl border border-slate-200 mb-2">
+                <Search className="h-3.5 w-3.5 text-slate-400" />
+                <input
+                  type="text"
+                  value={routeSearch}
+                  onChange={(e) => setRouteSearch(e.target.value)}
+                  placeholder="Search HR Niti pages..."
+                  className="bg-transparent text-xs outline-none w-full text-slate-800 font-medium"
+                  autoFocus
+                />
+              </div>
+
+              <div className="max-h-56 overflow-y-auto space-y-0.5 divide-y divide-slate-50">
+                {INTERNAL_LINK_TARGETS
+                  .filter(t => 
+                    t.title.toLowerCase().includes(routeSearch.toLowerCase()) || 
+                    t.route.toLowerCase().includes(routeSearch.toLowerCase()) ||
+                    t.keywords.some(k => k.toLowerCase().includes(routeSearch.toLowerCase()))
+                  )
+                  .map(target => (
+                    <button
+                      key={target.route}
+                      type="button"
+                      onClick={() => {
+                        executeCommand('createLink', target.route);
+                        setShowRoutePicker(false);
+                        setRouteSearch('');
+                      }}
+                      className="w-full text-left px-2.5 py-1.5 hover:bg-emerald-50 rounded-lg transition-colors cursor-pointer group flex flex-col"
+                    >
+                      <span className="font-bold text-slate-800 group-hover:text-emerald-700">
+                        {target.title}
+                      </span>
+                      <span className="text-[10px] text-slate-400 font-mono">
+                        {target.route}
+                      </span>
+                    </button>
+                  ))}
+              </div>
+            </div>
+          )}
+        </div>
+
         <button
           type="button"
           onClick={addImage}

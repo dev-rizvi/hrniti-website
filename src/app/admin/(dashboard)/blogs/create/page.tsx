@@ -16,11 +16,13 @@ import {
 } from 'lucide-react';
 import { createBlogAction, uploadImageAction } from '../actions';
 import RichTextEditor from '@/components/blog/RichTextEditor';
+import RankMathSeo from '@/components/blog/RankMathSeo';
 
 export default function CreateBlogPage() {
   const router = useRouter();
   const [saving, setSaving] = useState(false);
   const [uploading, setUploading] = useState(false);
+  const [focusKeyword, setFocusKeyword] = useState('');
   const [formData, setFormData] = useState({
     title: '',
     slug: '',
@@ -66,12 +68,31 @@ export default function CreateBlogPage() {
       const formDataObj = new FormData();
       formDataObj.append('file', file);
 
-      const result = await uploadImageAction(formDataObj);
-      if (!result.success || !result.url) {
-        throw new Error(result.error || 'Failed to get image URL');
+      let resultUrl = '';
+      try {
+        const apiRes = await fetch('/api/upload', {
+          method: 'POST',
+          body: formDataObj,
+        });
+        if (apiRes.ok) {
+          const apiData = await apiRes.json();
+          if (apiData.success && apiData.url) {
+            resultUrl = apiData.url;
+          }
+        }
+      } catch (fetchErr) {
+        console.warn('API upload fallback to server action', fetchErr);
       }
 
-      setFormData(prev => ({ ...prev, featured_image: result.url }));
+      if (!resultUrl) {
+        const result = await uploadImageAction(formDataObj);
+        if (!result.success || !result.url) {
+          throw new Error(result.error || 'Failed to get image URL');
+        }
+        resultUrl = result.url;
+      }
+
+      setFormData(prev => ({ ...prev, featured_image: resultUrl }));
       setMessage({ type: 'success', text: 'Image uploaded successfully!' });
     } catch (err: any) {
       console.error('Upload error:', err);
@@ -281,12 +302,23 @@ export default function CreateBlogPage() {
           {/* Section 2: SEO metadata */}
           <div className="space-y-6 pt-4">
             <h3 className="text-xs font-bold text-slate-400 uppercase tracking-widest border-b border-slate-100 pb-2 flex items-center gap-1.5">
-              <Globe className="h-4 w-4 text-slate-400" /> SEO Metadata (Search Engine Optimization)
+              <Globe className="h-4 w-4 text-slate-400" /> SEO Metadata & Search Engine Optimization
             </h3>
 
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Meta Title</label>
+                <div className="flex items-center justify-between mb-2">
+                  <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Meta Title</label>
+                  <span className={`text-[11px] font-semibold ${
+                    formData.meta_title.length > 60 
+                      ? 'text-amber-600' 
+                      : formData.meta_title.length >= 50 
+                      ? 'text-emerald-600' 
+                      : 'text-slate-400'
+                  }`}>
+                    {formData.meta_title.length}/60 chars (ideal: 50-60)
+                  </span>
+                </div>
                 <input
                   type="text"
                   value={formData.meta_title}
@@ -294,6 +326,9 @@ export default function CreateBlogPage() {
                   placeholder="e.g. Exceptional LMS features for corporate training"
                   className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-850 outline-none focus:bg-white focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-medium"
                 />
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Rendered as the exact title tag on the page. Leave empty to use the blog title.
+                </p>
               </div>
               <div>
                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-1.5">
@@ -306,17 +341,50 @@ export default function CreateBlogPage() {
                   placeholder="e.g. LMS, Learning Management System, HR Niti"
                   className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-850 outline-none focus:bg-white focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all font-medium"
                 />
+                <p className="text-[11px] text-slate-400 mt-1">
+                  Comma-separated keywords for meta tags and topic indexing.
+                </p>
               </div>
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Meta Description</label>
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Meta Description</label>
+                <span className={`text-[11px] font-semibold ${
+                  formData.meta_description.length > 160 
+                    ? 'text-amber-600' 
+                    : formData.meta_description.length >= 120 
+                    ? 'text-emerald-600' 
+                    : 'text-slate-400'
+                }`}>
+                  {formData.meta_description.length}/160 chars (ideal: 120-160)
+                </span>
+              </div>
               <textarea
                 rows={2}
                 value={formData.meta_description}
                 onChange={(e) => setFormData({ ...formData, meta_description: e.target.value })}
-                placeholder="Provide a search snippet meta description. Keep it under 160 characters..."
+                placeholder="Provide a search snippet meta description. Keep it between 120 and 160 characters for best Google CTR..."
                 className="w-full rounded-xl border border-slate-200 px-4 py-3 text-sm text-slate-850 outline-none focus:bg-white focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 transition-all resize-none font-medium"
+              />
+            </div>
+
+            {/* Rank Math Pro SEO Suite */}
+            <div className="pt-2">
+              <RankMathSeo
+                title={formData.title}
+                slug={formData.slug}
+                summary={formData.summary}
+                content={formData.content}
+                featured_image={formData.featured_image}
+                meta_title={formData.meta_title}
+                meta_description={formData.meta_description}
+                meta_keywords={formData.meta_keywords}
+                author={formData.author}
+                onApplyMetaTitle={(t) => setFormData(prev => ({ ...prev, meta_title: t }))}
+                onApplyMetaDescription={(d) => setFormData(prev => ({ ...prev, meta_description: d }))}
+                onContentChange={(c) => setFormData(prev => ({ ...prev, content: c }))}
+                onMetaKeywordsChange={(kws) => setFormData(prev => ({ ...prev, meta_keywords: kws }))}
               />
             </div>
 

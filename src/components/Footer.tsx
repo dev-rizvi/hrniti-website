@@ -98,6 +98,7 @@ export default function Footer() {
         resources: {
             title: "Resources & Guides",
             items: [
+                { name: "Blog",                  href: "/blog" },
                 { name: "HR Glossary",           href: "/resources/hr-glossary" },
                 { name: "HR Tools & Calculators",href: "/tools" },
                 { name: "Best HRMS Software",    href: "/best-hrms-software-india" },

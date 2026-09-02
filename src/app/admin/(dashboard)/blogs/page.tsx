@@ -13,7 +13,8 @@ import {
   Loader2, 
   CheckCircle, 
   AlertTriangle,
-  FileText
+  FileText,
+  ExternalLink
 } from 'lucide-react';
 import { createClient } from '@/lib/supabase';
 import { deleteBlogAction } from './actions';
@@ -190,6 +191,17 @@ export default function AdminBlogsPage() {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center justify-end gap-2">
+                      {blog.published && (
+                        <a
+                          href={`/blog/${blog.slug}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-1.5 inline-flex items-center justify-center hover:bg-emerald-50 text-slate-400 hover:text-emerald-600 rounded-lg transition-colors cursor-pointer"
+                          title="View on Website"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      )}
                       <Link
                         href={`/admin/blogs/edit/${blog.id}`}
                         className="p-1.5 inline-flex items-center justify-center hover:bg-blue-50 text-slate-400 hover:text-blue-600 rounded-lg transition-colors cursor-pointer"

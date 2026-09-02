@@ -76,7 +76,8 @@ export default function Navbar() {
                 { name: "HR Tools",         href: "/tools",                    icon: Calculator, desc: "Free salary & statutory tax calculators" },
                 { name: "HR Templates",     href: "/templates",                icon: Download,   desc: "Ready-to-use policy & offer letter templates" },
                 { name: "HR Glossary",      href: "/resources/hr-glossary",    icon: Library,    desc: "Key HR & labour law terms defined" },
-                { name: "Research Reports", href: "/reports",                  icon: BookOpen,   desc: "Industry benchmarks & compliance guides" },
+                { name: "Research Reports", href: "/reports",                  icon: FileText,   desc: "Industry benchmarks & compliance guides" },
+                { name: "Blog",             href: "/blog",                     icon: BookOpen,   desc: "Latest HR, payroll & compliance insights" },
             ]
         }
     };

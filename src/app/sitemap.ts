@@ -26,6 +26,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         console.error("sitemap: failed to load templates", err);
     }
 
+    let blogRoutes: MetadataRoute.Sitemap = [];
+
+    try {
+        const blogs = await prisma.blog.findMany({
+            where: { published: true },
+            select: { slug: true, updated_at: true, created_at: true },
+        });
+        blogRoutes = blogs.map((b) => ({
+            url: `${BASE_URL}/blog/${b.slug}`,
+            lastModified: b.updated_at ?? b.created_at ?? now,
+            changeFrequency: "weekly" as const,
+            priority: 0.8,
+        }));
+    } catch (err) {
+        console.error("sitemap: failed to load blogs", err);
+    }
+
     const industryRoutes: MetadataRoute.Sitemap = [
         { url: `${BASE_URL}/industries`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
         ...industries.map((industry) => ({
@@ -61,6 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const staticRoutes: MetadataRoute.Sitemap = [
         // Core Pages
         { url: `${BASE_URL}/`, lastModified: now, changeFrequency: "weekly", priority: 1.0 },
+        { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
         { url: `${BASE_URL}/hrms-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
         { url: `${BASE_URL}/pricing`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
         { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
@@ -122,6 +140,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     return [
         ...staticRoutes,
+        ...blogRoutes,
         ...industryRoutes,
         ...toolRoutes,
         ...glossaryRoutes,
