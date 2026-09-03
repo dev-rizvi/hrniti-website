@@ -9,6 +9,7 @@ import LocalPresence from "@/components/location/LocalPresence";
 import SmHRtFeatures from "@/components/location/SmHRtFeatures";
 import WhyChoose from "@/components/location/WhyChoose";
 import CityFaqAccordion from "@/components/location/CityFaqAccordion";
+import CTASection from "@/components/about/CTASection";
 import InterCityNav from "@/components/location/InterCityNav";
 import { getCityDataBySlug, allCityRouteSlugs } from "@/data/cityData";
 
@@ -170,6 +171,8 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             <LocalPresence />
 
             <CityFaqAccordion cityName={cityData.name} faqs={cityData.faqs} />
+
+            <CTASection cityName={cityData.name} />
 
             <InterCityNav currentCity={cityData.slug} />
 

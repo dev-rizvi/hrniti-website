@@ -56,6 +56,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // Legacy/alias routes
+      { source: "/delhi", destination: "/hrms-payroll-software-in-delhi", permanent: true },
       { source: "/login", destination: "/admin/login", permanent: true },
       { source: "/contact", destination: "/contact-us", permanent: true },
       { source: "/expense-management", destination: "/expense-management-software", permanent: true },

@@ -35,11 +35,11 @@ export default function ContactFormSection({ settings }: ContactFormSectionProps
   const [submitResult, setSubmitResult] = useState<{ success: boolean; message: string } | null>(null);
 
   // Official contact details
-  const displayPhone = "+91 8601489763";
-  const displayWhatsapp = "+91 8601489763";
-  const displayEmail = "support@hrniti.com";
-  const displayAddress = "5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001";
-  const displayMapUrl = "https://maps.google.com/maps?q=5/761,%20Sector%205,%20Gomti%20Nagar,%20Lucknow,%20Uttar%20Pradesh%20226001&t=&z=15&ie=UTF8&iwloc=&output=embed";
+  const displayPhone = settings?.phone || "+91 8601489763";
+  const displayWhatsapp = settings?.whatsapp || "+91 8601489763";
+  const displayEmail = settings?.email || "sales@hrniti.com";
+  const displayAddress = settings?.location_address || "5/761, Sector 5, Sector 6, Gomti Nagar, Lucknow, Uttar Pradesh 226001";
+  const displayMapUrl = settings?.location_map_url || "https://maps.google.com/maps?q=5/761,%20Sector%205,%20Gomti%20Nagar,%20Lucknow,%20Uttar%20Pradesh%20226001&t=&z=15&ie=UTF8&iwloc=&output=embed";
 
   const handleWhatsappClick = () => {
     const cleanNumber = displayWhatsapp.replace(/[^0-9]/g, "");

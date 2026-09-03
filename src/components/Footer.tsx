@@ -192,7 +192,7 @@ export default function Footer() {
 
                         {/* Tagline */}
                         <p className="text-[14px] leading-relaxed text-slate-400 max-w-lg">
-                            India&apos;s leading <span className="text-emerald-400 font-medium">AI-powered HRMS &amp; Payroll platform</span> — simplifying workforce management, payroll compliance, and employee engagement for modern businesses.
+                            HR Niti is an Indian HRMS and payroll software platform helping businesses manage employee records, attendance, payroll, recruitment and workforce analytics. Serving businesses across India, including Delhi NCR.
                         </p>
 
                         {/* Contact info & Social row */}
@@ -202,9 +202,9 @@ export default function Footer() {
                                     <Phone className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
                                     <span>+91 8601489763</span>
                                 </a>
-                                <a href="mailto:support@hrniti.com" className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors">
+                                <a href={`mailto:${settings?.email || "sales@hrniti.com"}`} className="flex items-center gap-2 text-slate-300 hover:text-emerald-400 transition-colors">
                                     <Mail className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
-                                    <span>support@hrniti.com</span>
+                                    <span>{settings?.email || "sales@hrniti.com"}</span>
                                 </a>
                             </div>
                             <div className="flex items-start gap-2 text-[13px] text-slate-400 max-w-lg">
@@ -237,26 +237,35 @@ export default function Footer() {
                                     <span>Enterprise Security &amp; Compliance</span>
                                 </div>
 
-                                {/* Certification Logos - Larger & Highly Visible */}
+                                {/* Certification Logos - Larger, Highly Visible & Clickable */}
                                 <div className="flex flex-wrap items-center gap-3">
-                                    <div 
-                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16" 
-                                        title="AICPA SOC Certification"
+                                    <a 
+                                        href="/image/imgg1.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16 cursor-pointer" 
+                                        title="View AICPA SOC Certification"
                                     >
                                         <img src="/image/imgg1.png" alt="AICPA SOC Certification" className="h-10 sm:h-11 w-auto object-contain" />
-                                    </div>
-                                    <div 
-                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16" 
-                                        title="ISO 27001 Certification"
+                                    </a>
+                                    <a 
+                                        href="/image/imgg2.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16 cursor-pointer" 
+                                        title="View ISO 27001 Certification"
                                     >
                                         <img src="/image/imgg2.png" alt="ISO 27001 Certification" className="h-10 sm:h-11 w-auto object-contain" />
-                                    </div>
-                                    <div 
-                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16" 
-                                        title="ISO 9001:2015 Certification"
+                                    </a>
+                                    <a 
+                                        href="/image/imgg3.png"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="bg-white rounded-xl p-2 px-3.5 border border-slate-200 shadow-sm hover:shadow-md hover:scale-105 transition-all duration-200 flex items-center justify-center h-14 sm:h-16 cursor-pointer" 
+                                        title="View ISO 9001:2015 Certification"
                                     >
                                         <img src="/image/imgg3.png" alt="ISO 9001:2015 Certification" className="h-10 sm:h-11 w-auto object-contain" />
-                                    </div>
+                                    </a>
                                 </div>
 
                                 {/* Security Tags */}

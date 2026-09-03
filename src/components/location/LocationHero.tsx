@@ -124,7 +124,7 @@ export default function LocationHero({ cityData, cityName: rawCityName, tagline:
                         <div className="bg-emerald-900/50 border border-emerald-500/30 backdrop-blur-md rounded-xl p-4 text-left shadow-lg">
                             <div className="flex items-start gap-3">
                                 <span className="bg-amber-400 text-emerald-950 font-bold px-2 py-0.5 text-[11px] rounded uppercase tracking-wider mt-0.5 flex-shrink-0">
-                                    AI Summary
+                                    Quick Answer
                                 </span>
                                 <p className="text-xs md:text-sm text-emerald-100 leading-relaxed">
                                     {aeoSummary}
@@ -136,7 +136,7 @@ export default function LocationHero({ cityData, cityName: rawCityName, tagline:
                         <div className="flex flex-wrap items-center gap-6 pt-2 text-xs md:text-sm text-emerald-200 font-medium">
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-amber-400"></span>
-                                <span>Automated State Tax &amp; Statutory Compliance</span>
+                                <span>Statutory Deductions &amp; Payroll Compliance</span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <span className="w-2 h-2 rounded-full bg-emerald-400"></span>

@@ -1,7 +1,16 @@
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 
-export default function CTASection() {
+interface CTASectionProps {
+    cityName?: string;
+    title?: string;
+    description?: string;
+}
+
+export default function CTASection({ cityName, title, description }: CTASectionProps = {}) {
+    const displayTitle = title || (cityName ? `Ready to Transform HR & Payroll in ${cityName}?` : "Ready to Transform Your HR Operations?");
+    const displayDescription = description || (cityName ? `Join growing enterprises in ${cityName} using HR Niti to automate statutory payroll and employee management.` : "Join growing enterprises across India using HR Niti to automate multi-state statutory payroll and employee management.");
+
     return (
         <section className="bg-gradient-to-br from-emerald-950 via-emerald-900 to-amber-950 py-16 text-white text-center relative overflow-hidden">
             {/* Background Glow */}
@@ -16,11 +25,11 @@ export default function CTASection() {
                 </div>
 
                 <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 text-white">
-                    Ready to Transform Your HR Operations?
+                    {displayTitle}
                 </h2>
                 
                 <p className="text-emerald-100/90 max-w-lg mx-auto mb-8 font-medium text-lg leading-relaxed">
-                    Join growing enterprises across India using HR Niti to automate multi-state statutory payroll and employee management.
+                    {displayDescription}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

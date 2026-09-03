@@ -32,9 +32,9 @@ export default function ContactHero() {
                             <Phone className="h-5 w-5 text-green-400 group-hover:scale-110 transition-transform" />
                             <span className="text-sm font-medium">Call Us (+91 8601489763)</span>
                         </a>
-                        <a href="mailto:support@hrniti.com" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all rounded-lg px-4 py-3 border border-white/20 group">
+                        <a href="mailto:sales@hrniti.com" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all rounded-lg px-4 py-3 border border-white/20 group">
                             <Mail className="h-5 w-5 text-emerald-400 group-hover:scale-110 transition-transform" />
-                            <span className="text-sm font-medium">Email Us</span>
+                            <span className="text-sm font-medium">Email Us (sales@hrniti.com)</span>
                         </a>
                         <a href="https://wa.me/918601489763" target="_blank" rel="noopener noreferrer nofollow" className="flex items-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all rounded-lg px-4 py-3 border border-white/20 group">
                             <MessageCircle className="h-5 w-5 text-emerald-400 group-hover:scale-110 transition-transform" />

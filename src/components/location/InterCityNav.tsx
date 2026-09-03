@@ -3,14 +3,16 @@ import Link from "next/link";
 import { cityList } from "@/data/cityData";
 
 interface InterCityNavProps {
-    currentCity: string;
+    currentCity?: string;
 }
 
 export default function InterCityNav({ currentCity }: InterCityNavProps) {
-    // Filter out current city (match by slug or seoSlug)
-    const otherCities = cityList.filter(
-        city => city.slug !== currentCity.toLowerCase() && city.seoSlug !== currentCity.toLowerCase()
-    );
+    // Filter out current city if provided (match by slug or seoSlug)
+    const otherCities = currentCity
+        ? cityList.filter(
+            city => city.slug !== currentCity.toLowerCase() && city.seoSlug !== currentCity.toLowerCase()
+        )
+        : cityList;
 
     return (
         <section className="py-16 bg-white border-t border-gray-200">

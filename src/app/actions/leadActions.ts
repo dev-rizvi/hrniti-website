@@ -44,7 +44,36 @@ export async function submitDemoLeadAction(data: DemoLeadInput) {
             `Submission Date: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })} IST`
         ].filter(Boolean).join('\n');
 
-        // Store directly into contact_inquiries table in Database
+        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://tpfkfjlpafhlfaovrern.supabase.co';
+        const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'sb_publishable_bNRrR39A0REONQBYJIWQJg_2SME02mj';
+        const { createClient } = await import('@supabase/supabase-js');
+        const supabase = createClient(supabaseUrl, supabaseKey);
+
+        try {
+            const { data: leadData, error: sbErr } = await supabase
+                .from('contact_inquiries')
+                .insert({
+                    name: name.trim(),
+                    email: email.trim(),
+                    phone: phone.trim(),
+                    subject,
+                    message: messageLines,
+                    status: 'new',
+                })
+                .select('id')
+                .single();
+
+            if (!sbErr && leadData) {
+                try {
+                    revalidatePath('/admin/contacts');
+                } catch {}
+                return { success: true, id: leadData.id };
+            }
+        } catch (sbEx) {
+            console.warn('Supabase lead submit error, trying Prisma fallback:', sbEx);
+        }
+
+        // Fallback: Store directly into contact_inquiries table in Database via Prisma
         const inquiry = await prisma.contact_inquiries.create({
             data: {
                 name: name.trim(),

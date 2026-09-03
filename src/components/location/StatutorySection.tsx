@@ -29,7 +29,7 @@ export default function StatutorySection({ cityData }: StatutorySectionProps) {
                                 {stateName} Statutory &amp; Payroll Compliance
                             </span>
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight">
-                                100% Automated State Tax &amp; Labour Compliance in {cityName}
+                                Automated Payroll &amp; Statutory Compliance in {cityName}
                             </h2>
                             <p className="text-gray-600 text-base leading-relaxed">
                                 Managing payroll in {cityName} requires strict adherence to {stateName} statutory norms, wage boards, and state tax filings. HR Niti eliminates human error by auto-calculating all deductions every month.
