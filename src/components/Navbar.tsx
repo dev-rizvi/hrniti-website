@@ -122,19 +122,21 @@ export default function Navbar() {
                                     <ul className="space-y-1">
                                         {group.items.map((item, i) => (
                                             <li key={i}>
-                                                <Link 
-                                                    href={item.href} 
-                                                    onClick={() => setOpenDropdown(null)}
-                                                    className="flex items-center gap-3 p-2 rounded-lg hover:bg-emerald-50/50 transition-colors group/item"
-                                                >
+                                                <div className="flex items-center gap-3 p-2 rounded-lg hover:bg-emerald-50/50 transition-colors group/item relative">
                                                     <div className="p-1.5 bg-emerald-50 text-emerald-600 rounded-md group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shrink-0">
                                                         <item.icon className="h-3.5 w-3.5" />
                                                     </div>
                                                     <div>
-                                                        <div className="text-xs sm:text-sm font-bold text-slate-800 group-hover/item:text-emerald-700">{item.name}</div>
-                                                        <div className="text-[11px] text-slate-500 line-clamp-1">{item.desc}</div>
+                                                        <Link 
+                                                            href={item.href} 
+                                                            onClick={() => setOpenDropdown(null)}
+                                                            className="text-xs sm:text-sm font-bold text-slate-800 group-hover/item:text-emerald-700 block hover:underline before:absolute before:inset-0"
+                                                        >
+                                                            {item.name}
+                                                        </Link>
+                                                        <div className="text-[11px] text-slate-500 line-clamp-1 pointer-events-none">{item.desc}</div>
                                                     </div>
-                                                </Link>
+                                                </div>
                                             </li>
                                         ))}
                                     </ul>
@@ -165,19 +167,21 @@ export default function Navbar() {
                             <ul className="space-y-1.5">
                                 {menuItems.solutions.items.map((item, i) => (
                                     <li key={i}>
-                                        <Link 
-                                            href={item.href} 
-                                            onClick={() => setOpenDropdown(null)}
-                                            className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-emerald-50/50 transition-colors group/item"
-                                        >
+                                        <div className="flex items-start gap-3 p-2.5 rounded-xl hover:bg-emerald-50/50 transition-colors group/item relative">
                                             <div className="p-2 bg-emerald-100/80 text-emerald-700 rounded-lg group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shrink-0">
                                                 <item.icon className="h-4 w-4" />
                                             </div>
                                             <div>
-                                                <div className="text-sm font-bold text-slate-800 group-hover/item:text-emerald-700">{item.name}</div>
-                                                <div className="text-xs text-slate-500">{item.desc}</div>
+                                                <Link 
+                                                    href={item.href} 
+                                                    onClick={() => setOpenDropdown(null)}
+                                                    className="text-sm font-bold text-slate-800 group-hover/item:text-emerald-700 block hover:underline before:absolute before:inset-0"
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                                <div className="text-xs text-slate-500 pointer-events-none">{item.desc}</div>
                                             </div>
-                                        </Link>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>
@@ -220,19 +224,21 @@ export default function Navbar() {
                             <ul className="space-y-1">
                                 {menuItems.resources.items.map((item, i) => (
                                     <li key={i}>
-                                        <Link 
-                                            href={item.href} 
-                                            onClick={() => setOpenDropdown(null)}
-                                            className="flex items-start gap-3 p-2 rounded-xl hover:bg-emerald-50/50 transition-colors group/item"
-                                        >
+                                        <div className="flex items-start gap-3 p-2 rounded-xl hover:bg-emerald-50/50 transition-colors group/item relative">
                                             <div className="p-2 bg-emerald-100/80 text-emerald-700 rounded-lg group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shrink-0">
                                                 <item.icon className="h-4 w-4" />
                                             </div>
                                             <div>
-                                                <div className="text-sm font-bold text-slate-800 group-hover/item:text-emerald-700">{item.name}</div>
-                                                <div className="text-xs text-slate-500">{item.desc}</div>
+                                                <Link 
+                                                    href={item.href} 
+                                                    onClick={() => setOpenDropdown(null)}
+                                                    className="text-sm font-bold text-slate-800 group-hover/item:text-emerald-700 block hover:underline before:absolute before:inset-0"
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                                <div className="text-xs text-slate-500 pointer-events-none">{item.desc}</div>
                                             </div>
-                                        </Link>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>
@@ -260,19 +266,21 @@ export default function Navbar() {
                             <ul className="space-y-1">
                                 {menuItems.company.items.map((item, i) => (
                                     <li key={i}>
-                                        <Link 
-                                            href={item.href} 
-                                            onClick={() => setOpenDropdown(null)}
-                                            className="flex items-start gap-3 p-2 rounded-xl hover:bg-emerald-50/50 transition-colors group/item"
-                                        >
+                                        <div className="flex items-start gap-3 p-2 rounded-xl hover:bg-emerald-50/50 transition-colors group/item relative">
                                             <div className="p-2 bg-emerald-100/80 text-emerald-700 rounded-lg group-hover/item:bg-emerald-600 group-hover/item:text-white transition-colors shrink-0">
                                                 <item.icon className="h-4 w-4" />
                                             </div>
                                             <div>
-                                                <div className="text-sm font-bold text-slate-800 group-hover/item:text-emerald-700">{item.name}</div>
-                                                <div className="text-xs text-slate-500">{item.desc}</div>
+                                                <Link 
+                                                    href={item.href} 
+                                                    onClick={() => setOpenDropdown(null)}
+                                                    className="text-sm font-bold text-slate-800 group-hover/item:text-emerald-700 block hover:underline before:absolute before:inset-0"
+                                                >
+                                                    {item.name}
+                                                </Link>
+                                                <div className="text-xs text-slate-500 pointer-events-none">{item.desc}</div>
                                             </div>
-                                        </Link>
+                                        </div>
                                     </li>
                                 ))}
                             </ul>

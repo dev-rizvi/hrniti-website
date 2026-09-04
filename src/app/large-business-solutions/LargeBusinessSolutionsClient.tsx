@@ -154,9 +154,7 @@ export default function LargeBusinessSolutionsClient() {
 
               {/* Secondary Lead Copy */}
               <p className="text-base md:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
-                Centralize payroll, compliance, workforce operations and employee data across your enterprise.
-                HR Niti helps organizations with 250–1000+ employees manage multi-state payroll, complex shifts,
-                attendance, employee lifecycle processes, approvals, workforce analytics and enterprise integrations from one platform.
+                HR Niti provides enterprise HRMS &amp; payroll software for large businesses in India, centralizing multi-state statutory payroll, compliance, workforce operations and employee records across your organization. Designed for enterprises with 250–1000+ employees, HR Niti simplifies complex shifts, attendance, employee lifecycle processes, approvals, workforce analytics and enterprise ERP integrations from one unified platform.
               </p>
 
               {/* Key Benefits Checklist */}
@@ -422,11 +420,10 @@ export default function LargeBusinessSolutionsClient() {
 
               {/* Direct AEO Definition Answer */}
               <p className="text-gray-800 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-6">
-                Enterprise HRMS software is a centralized human-resource management platform designed for large organizations
-                with complex employee structures, multiple locations, departments, payroll rules and approval workflows.
-                It typically combines core HR, attendance, leave, payroll, compliance, employee self-service, reporting,
-                integrations and access controls. For Indian enterprises, an enterprise HRMS also needs to support multi-state
-                statutory requirements and integration with existing ERP, finance and attendance systems.
+                Enterprise HRMS &amp; payroll software for large businesses in India is a centralized workforce operating system
+                engineered for organizations with 250 to 1,000+ employees. It unifies complex corporate hierarchies, multi-state
+                statutory compliance, 24/7 industrial shift rostering, granular role-based access, and enterprise ERP integrations
+                (SAP, Oracle, Workday) into one secure cloud platform.
               </p>
 
               {/* Bottom Feature Badges Bar */}
@@ -735,10 +732,7 @@ export default function LargeBusinessSolutionsClient() {
             {/* Feature Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Module 1: Multi-State Payroll & Statutory Compliance */}
-              <Link
-                href="/payroll-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <ShieldCheck className="w-6 h-6" />
@@ -747,23 +741,27 @@ export default function LargeBusinessSolutionsClient() {
                     Multi-State Statutory
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Multi-State Payroll &amp; Statutory Compliance
+                    <Link href="/payroll-software" className="hover:underline">
+                      Multi-State Payroll &amp; Statutory Compliance
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Automate high-volume gross-to-net salary processing with multi-state Professional Tax, EPF ceiling allocations, ESIC gross thresholds, Section 192 TDS across Old and New tax regimes, and Labour Welfare Fund (LWF) rules.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore enterprise payroll</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/payroll-software"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Multi-State Compliance</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 2: Enterprise ERP & API Integrations */}
-              <Link
-                href="/payroll-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Database className="w-6 h-6" />
@@ -772,23 +770,27 @@ export default function LargeBusinessSolutionsClient() {
                     System Interoperability
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Enterprise ERP &amp; API Integrations
+                    <Link href="/payroll-software" className="hover:underline">
+                      Enterprise ERP &amp; API Integrations
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Connect HR Niti with SAP S/4HANA, Oracle HCM, Workday, and Microsoft Dynamics. Bi-directionally sync employee master data, cost centers, attendance hours, and general ledger journal vouchers with zero manual effort.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore ERP integration</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/payroll-software"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Enterprise ERP Connectors</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 3: Multi-Shift Rostering & Overtime */}
-              <Link
-                href="/attendance"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Factory className="w-6 h-6" />
@@ -797,23 +799,27 @@ export default function LargeBusinessSolutionsClient() {
                     Industrial Rosters
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Multi-Shift Rostering &amp; Overtime
+                    <Link href="/attendance" className="hover:underline">
+                      Multi-Shift Rostering &amp; Overtime
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Manage 24/7 continuous plant operations, rotational shifts, split shifts, and weekend relief rotations. Automate Section 59 Factories Act overtime calculations, shift differential premiums, and biometric hardware punch synchronization.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore shift management</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/attendance"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Factory Shift Rostering</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 4: Granular RBAC, Audit Trails & Security */}
-              <Link
-                href="/employee-management"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Lock className="w-6 h-6" />
@@ -822,23 +828,27 @@ export default function LargeBusinessSolutionsClient() {
                     Governance &amp; RBAC
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Granular RBAC, Audit Trails &amp; Security
+                    <Link href="/employee-management" className="hover:underline">
+                      Granular RBAC, Audit Trails &amp; Security
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Enforce strict data governance across corporate departments and branch plants. Configure custom role-based permissions, SAML 2.0 / Azure AD single sign-on (SSO), and immutable system event logs for regulatory audit defense.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore enterprise security</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/employee-management"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Enterprise RBAC Security</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 5: Employee Self-Service & Mobile HR */}
-              <Link
-                href="/employee-self-service"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Smartphone className="w-6 h-6" />
@@ -847,23 +857,27 @@ export default function LargeBusinessSolutionsClient() {
                     Mass Employee App
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Employee Self-Service &amp; Mobile HR
+                    <Link href="/employee-self-service" className="hover:underline">
+                      Employee Self-Service &amp; Mobile HR
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Deliver consumer-grade employee mobile apps on iOS &amp; Android. Thousands of workers can view attendance records, download digital payslips, submit reimbursement bills, and ask Niti AI routine policy questions 24/7.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore mobile ESS</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/employee-self-service"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Enterprise Mobile ESS</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 6: Workforce Analytics & Headcount Planning */}
-              <Link
-                href="/hr-mis-reports"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <BarChart3 className="w-6 h-6" />
@@ -872,23 +886,27 @@ export default function LargeBusinessSolutionsClient() {
                     Workforce Analytics
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Workforce Analytics &amp; Headcount Planning
+                    <Link href="/hr-mis-reports" className="hover:underline">
+                      Workforce Analytics &amp; Headcount Planning
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Equip C-suite leadership and CHROs with predictive intelligence. Analyze department-wise CTC variances, factory overtime cost leakage, employee attrition trends, and forecast upcoming talent requirements accurately.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore workforce analytics</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/hr-mis-reports"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Workforce MIS Analytics</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 7: Performance, OKRs & Workforce Development */}
-              <Link
-                href="/performance-management-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <TrendingUp className="w-6 h-6" />
@@ -897,23 +915,27 @@ export default function LargeBusinessSolutionsClient() {
                     PMS &amp; OKRs
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Performance, OKRs &amp; Workforce Development
+                    <Link href="/performance-management-software" className="hover:underline">
+                      Performance, OKRs &amp; Workforce Development
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Drive organizational alignment at enterprise scale. Conduct structured annual appraisal cycles, track department OKRs, collect peer 360-degree feedback, and automatically feed ratings into annual compensation adjustments.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore performance management</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/performance-management-software"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Enterprise Performance OKRs</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 8: Recruitment & Employee Lifecycle Management */}
-              <Link
-                href="/employee-management"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Users className="w-6 h-6" />
@@ -922,17 +944,24 @@ export default function LargeBusinessSolutionsClient() {
                     Lifecycle &amp; ATS
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Recruitment &amp; Employee Lifecycle Management
+                    <Link href="/employee-management" className="hover:underline">
+                      Recruitment &amp; Employee Lifecycle Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Manage the entire employee lifecycle from job requisition to offboarding. Standardize candidate screening, automate digital appointment letter release, manage confirmation reviews, and conduct compliant full-and-final (FnF) settlements.
                   </p>
                 </div>
-                <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore lifecycle management</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                <div className="mt-6 pt-4 border-t border-gray-100">
+                  <Link
+                    href="/employee-management"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-emerald-600 hover:text-emerald-700 transition-colors"
+                  >
+                    <span>Explore Employee Lifecycle ATS</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

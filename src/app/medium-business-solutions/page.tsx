@@ -10,7 +10,7 @@ const pageUrl = `${BASE_URL}/medium-business-solutions`;
 export const metadata: Metadata = {
   title: "HRMS & Payroll for Medium Businesses in India",
   description:
-    "Scale HR operations with HR Niti for 50–250 employees. Manage multi-branch payroll, approvals, attendance, HR MIS, employee self-service and accounting integrations.",
+    "HRMS & payroll software for medium businesses in India (50–250 staff). Automate multi-branch payroll, approvals, attendance, and HR MIS.",
   keywords: [
     "HRMS software for medium business",
     "HRMS software for mid-sized companies",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HRMS & Payroll for Medium Businesses in India | HR Niti",
     description:
-      "Scale HR operations with HR Niti for 50–250 employees. Manage multi-branch payroll, approvals, attendance, HR MIS, employee self-service and accounting integrations.",
+      "HRMS & payroll software for medium businesses in India (50–250 staff). Automate multi-branch payroll, approvals, attendance, and HR MIS.",
     url: pageUrl,
     type: "website",
     siteName: "HR Niti",
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HRMS & Payroll for Medium Businesses in India | HR Niti",
     description:
-      "Scale HR operations with HR Niti for 50–250 employees. Manage multi-branch payroll, approvals, attendance, HR MIS, employee self-service and accounting integrations.",
+      "HRMS & payroll software for medium businesses in India (50–250 staff). Automate multi-branch payroll, approvals, attendance, and HR MIS.",
     images: ["/og-default.png"],
   },
 };

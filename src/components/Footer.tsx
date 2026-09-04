@@ -345,9 +345,9 @@ export default function Footer() {
 
                     {/* Solutions by Scale (col 1) */}
                     <div>
-                        <h5 className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
+                        <div className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
                             Solutions by Size
-                        </h5>
+                        </div>
                         <ul className="space-y-2.5">
                             {footerLinks.solutions.items.map((item) => (
                                 <li key={item.name}>
@@ -361,9 +361,9 @@ export default function Footer() {
 
                     {/* Product — Core HR (col 2) */}
                     <div>
-                        <h5 className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
+                        <div className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
                             Core HR
-                        </h5>
+                        </div>
                         <ul className="space-y-2.5">
                             {footerLinks.product.groups[0].items.map((item) => (
                                 <li key={item.name}>
@@ -377,9 +377,9 @@ export default function Footer() {
 
                     {/* Product — Payroll & Ops (col 3) */}
                     <div>
-                        <h5 className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
+                        <div className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
                             Payroll &amp; Ops
-                        </h5>
+                        </div>
                         <ul className="space-y-2.5">
                             {footerLinks.product.groups[1].items.map((item) => (
                                 <li key={item.name}>
@@ -393,9 +393,9 @@ export default function Footer() {
 
                     {/* Resources (col 4) */}
                     <div>
-                        <h5 className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
+                        <div className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
                             Resources
-                        </h5>
+                        </div>
                         <ul className="space-y-2.5">
                             {footerLinks.resources.items.map((item) => (
                                 <li key={item.name}>
@@ -409,9 +409,9 @@ export default function Footer() {
 
                     {/* Company (col 5) */}
                     <div>
-                        <h5 className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
+                        <div className="text-white font-semibold text-sm mb-4 pb-2 border-b border-slate-800">
                             Company
-                        </h5>
+                        </div>
                         <ul className="space-y-2.5">
                             {footerLinks.company.items.map((item) => (
                                 <li key={item.name}>

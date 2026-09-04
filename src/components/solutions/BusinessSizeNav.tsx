@@ -48,9 +48,8 @@ export default function BusinessSizeNav({ currentScale }: BusinessSizeNavProps) 
                         {scales.map((scale) => {
                             const isActive = scale.id === currentScale;
                             return (
-                                <Link
+                                <div
                                     key={scale.id}
-                                    href={scale.slug}
                                     className={`p-6 rounded-2xl border transition-all flex flex-col justify-between ${isActive ? "bg-emerald-900 text-white border-emerald-700 shadow-xl" : "bg-gray-50 text-gray-900 border-gray-200 hover:border-emerald-400 hover:bg-emerald-50/50"}`}
                                 >
                                     <div>
@@ -58,7 +57,9 @@ export default function BusinessSizeNav({ currentScale }: BusinessSizeNavProps) 
                                             {scale.range}
                                         </span>
                                         <h3 className={`text-xl font-bold mt-3 mb-2 ${isActive ? "text-white" : "text-gray-900"}`}>
-                                            {scale.name}
+                                            <Link href={scale.slug} className={isActive ? "text-white hover:underline" : "text-gray-900 hover:text-emerald-700 hover:underline"}>
+                                                {scale.name}
+                                            </Link>
                                         </h3>
                                         <p className={`text-sm leading-relaxed ${isActive ? "text-emerald-100" : "text-gray-600"}`}>
                                             {scale.desc}
@@ -66,10 +67,16 @@ export default function BusinessSizeNav({ currentScale }: BusinessSizeNavProps) 
                                     </div>
 
                                     <div className={`mt-6 pt-4 border-t flex items-center justify-between text-xs font-bold ${isActive ? "border-emerald-800 text-amber-300" : "border-gray-200 text-emerald-700"}`}>
-                                        <span>{isActive ? "Currently Viewing" : "Explore Solution"}</span>
-                                        <span>➔</span>
+                                        <Link 
+                                            href={scale.slug}
+                                            className={`inline-flex items-center gap-1.5 font-bold ${isActive ? "text-amber-300 hover:text-amber-200" : "text-emerald-700 hover:text-emerald-900"}`}
+                                            aria-label={`Explore ${scale.name}`}
+                                        >
+                                            <span>{isActive ? `Currently Viewing ${scale.name}` : `Explore ${scale.name}`}</span>
+                                            <span>➔</span>
+                                        </Link>
                                     </div>
-                                </Link>
+                                </div>
                             );
                         })}
                     </div>

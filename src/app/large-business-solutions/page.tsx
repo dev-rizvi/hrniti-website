@@ -10,7 +10,7 @@ const pageUrl = `${BASE_URL}/large-business-solutions`;
 export const metadata: Metadata = {
   title: "Enterprise HRMS & Payroll for Large Businesses",
   description:
-    "Enterprise HRMS for 250–1000+ employees. Manage multi-state payroll, factory shifts, approvals, compliance, ERP integrations, workforce analytics and enterprise security with HR Niti.",
+    "Enterprise HRMS & payroll software for large businesses in India (250–1000+ staff). Automate multi-state payroll, factory shifts, and ERP.",
   keywords: [
     "enterprise HRMS software India",
     "enterprise payroll software India",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Enterprise HRMS & Payroll for Large Businesses | HR Niti",
     description:
-      "Enterprise HRMS for 250–1000+ employees. Manage multi-state payroll, factory shifts, approvals, compliance, ERP integrations, workforce analytics and enterprise security with HR Niti.",
+      "Enterprise HRMS & payroll software for large businesses in India (250–1000+ staff). Automate multi-state payroll, factory shifts, and ERP.",
     url: pageUrl,
     type: "website",
     siteName: "HR Niti",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Enterprise HRMS & Payroll for Large Businesses | HR Niti",
     description:
-      "Enterprise HRMS for 250–1000+ employees. Manage multi-state payroll, factory shifts, approvals, compliance, ERP integrations, workforce analytics and enterprise security with HR Niti.",
+      "Enterprise HRMS & payroll software for large businesses in India (250–1000+ staff). Automate multi-state payroll, factory shifts, and ERP.",
     images: ["/og-default.png"],
   },
 };

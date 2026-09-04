@@ -10,7 +10,7 @@ const pageUrl = `${BASE_URL}/small-business-solutions`;
 export const metadata: Metadata = {
   title: "HRMS & Payroll for Small Businesses in India",
   description:
-    "Manage HR and payroll for your small business with HR Niti. Automate attendance, leave, payroll, PF, ESIC, PT, TDS, payslips and employee self-service in one platform.",
+    "Best HRMS & payroll software for small businesses in India (1–50 staff). Automate PF, ESIC, PT, TDS, and mobile ESS in one platform.",
   keywords: [
     "HRMS software for small business",
     "HRMS for small businesses in India",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HRMS & Payroll for Small Businesses in India | HR Niti",
     description:
-      "Manage HR and payroll for your small business with HR Niti. Automate attendance, leave, payroll, PF, ESIC, PT, TDS, payslips and employee self-service in one platform.",
+      "Best HRMS & payroll software for small businesses in India (1–50 staff). Automate PF, ESIC, PT, TDS, and mobile ESS in one platform.",
     url: pageUrl,
     type: "website",
     siteName: "HR Niti",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "HRMS & Payroll for Small Businesses in India | HR Niti",
     description:
-      "Manage HR and payroll for your small business with HR Niti. Automate attendance, leave, payroll, PF, ESIC, PT, TDS, payslips and employee self-service in one platform.",
+      "Best HRMS & payroll software for small businesses in India (1–50 staff). Automate PF, ESIC, PT, TDS, and mobile ESS in one platform.",
     images: ["/og-default.png"],
   },
 };

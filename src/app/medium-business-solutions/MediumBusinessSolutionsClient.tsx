@@ -152,9 +152,9 @@ export default function MediumBusinessSolutionsClient() {
 
               {/* Secondary Lead Copy */}
               <p className="text-base md:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
-                Manage multi-branch HR, payroll and approvals from one scalable platform. HR Niti helps growing
-                companies with 50–250 employees centralize employee management, attendance, leave, payroll, approvals,
-                HR reporting, performance and employee self-service across departments and locations.
+                HR Niti provides the premier HRMS &amp; payroll software for medium businesses in India. Engineered for growing
+                companies with 50–250 employees, it centralizes multi-branch HR, multi-state payroll, multi-tier approvals,
+                attendance, and HR MIS reporting from one scalable platform.
               </p>
 
               {/* Key Benefits Checklist */}
@@ -418,11 +418,11 @@ export default function MediumBusinessSolutionsClient() {
 
               {/* Direct AEO Definition Answer */}
               <p className="text-gray-800 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-6">
-                HRMS software for a medium-sized business is a centralized system for managing employee records,
-                attendance, leave, payroll, approvals, compliance, reporting and employee self-service as an organization grows.
-                For companies with multiple departments or locations, an HRMS can also centralize branch-level policies,
-                payroll workflows, approvals and workforce analytics. HR Niti is designed for businesses with approximately
-                50–250 employees that need more control and automation than spreadsheet-based HR processes can provide.
+                HRMS &amp; payroll software for medium businesses in India is a centralized workforce management system for
+                managing employee records, branch-level attendance, multi-state payroll, multi-tier approvals, and statutory
+                compliance as an organization expands. For companies with 50–250 employees across multiple departments or
+                locations, an enterprise HRMS centralizes branch-level policies, approval hierarchies, and workforce analytics
+                without spreadsheet bottlenecks.
               </p>
 
               {/* Bottom Feature Badges Bar */}
@@ -731,10 +731,7 @@ export default function MediumBusinessSolutionsClient() {
             {/* Feature Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Module 1: Multi-Branch & Multi-State HR Management */}
-              <Link
-                href="/employee-management"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <GitBranch className="w-6 h-6" />
@@ -743,23 +740,24 @@ export default function MediumBusinessSolutionsClient() {
                     Multi-Branch Control
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Multi-Branch &amp; Multi-State HR Management
+                    <Link href="/employee-management" className="hover:underline">
+                      Multi-Branch &amp; Multi-State HR Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Centralize workforce governance across headquarters, regional branches, and field sales teams. Establish branch-specific working hours, state holiday lists, and localized statutory configurations while retaining consolidated corporate visibility.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore branch management</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/employee-management" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Multi-Branch HR">
+                    <span>Explore Multi-Branch HR</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 2: Multi-Level Approval Workflows */}
-              <Link
-                href="/leave-management"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Network className="w-6 h-6" />
@@ -768,23 +766,24 @@ export default function MediumBusinessSolutionsClient() {
                     Workflow Governance
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Multi-Level Approval Workflows
+                    <Link href="/leave-management" className="hover:underline">
+                      Multi-Level Approval Workflows
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Delegate operational approvals without losing administrative control. Configure sequential or parallel approval chains for leave, expense claims, attendance regularization, and travel requests based on organizational reporting lines.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore approval rules</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/leave-management" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Multi-Tier Approvals">
+                    <span>Explore Multi-Tier Approvals</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 3: Payroll & Statutory Compliance */}
-              <Link
-                href="/payroll-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <CreditCard className="w-6 h-6" />
@@ -793,23 +792,24 @@ export default function MediumBusinessSolutionsClient() {
                     Statutory Engine
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Payroll &amp; Statutory Compliance
+                    <Link href="/payroll-software" className="hover:underline">
+                      Payroll &amp; Statutory Compliance
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Automate complex payroll processing for 50 to 250 employees. Auto-compute EPF, ESIC, State PT slabs, and TDS under Section 192, producing validated electronic challan files (ECR), Form 16s, and batch bank transfer sheets in minutes.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore payroll software</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/payroll-software" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Mid-Market Payroll">
+                    <span>Explore Mid-Market Payroll</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 4: HR MIS & Workforce Analytics */}
-              <Link
-                href="/hr-mis-reports"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <BarChart3 className="w-6 h-6" />
@@ -818,23 +818,24 @@ export default function MediumBusinessSolutionsClient() {
                     Executive Intelligence
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    HR MIS &amp; Workforce Analytics
+                    <Link href="/hr-mis-reports" className="hover:underline">
+                      HR MIS &amp; Workforce Analytics
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Equip business leaders with actionable intelligence. Generate real-time reports for department CTC costs, overtime spending trends, attrition rates, leave liability valuations, and month-over-month payroll variance audits.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore HR MIS reports</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/hr-mis-reports" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Workforce MIS Analytics">
+                    <span>Explore Workforce MIS Analytics</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 5: Employee Self-Service & Niti AI */}
-              <Link
-                href="/employee-self-service"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Smartphone className="w-6 h-6" />
@@ -843,23 +844,24 @@ export default function MediumBusinessSolutionsClient() {
                     Employee App &amp; AI
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Employee Self-Service &amp; Niti AI
+                    <Link href="/employee-self-service" className="hover:underline">
+                      Employee Self-Service &amp; Niti AI
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Deliver a superior digital employee experience with native iOS &amp; Android apps. Team members check attendance, download payslips, and query company HR policies directly using Niti AI, slashing routine HR ticket volumes by up to 80%.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore ESS &amp; Niti AI</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/employee-self-service" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Mobile ESS with AI">
+                    <span>Explore Mobile ESS with AI</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 6: Performance Management & OKRs */}
-              <Link
-                href="/performance-management-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <TrendingUp className="w-6 h-6" />
@@ -868,17 +870,21 @@ export default function MediumBusinessSolutionsClient() {
                     Growth &amp; Appraisals
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Performance Management &amp; OKRs
+                    <Link href="/performance-management-software" className="hover:underline">
+                      Performance Management &amp; OKRs
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Align company objectives with individual accountability. Conduct structured quarterly or annual appraisal cycles, track employee OKRs and KPIs, collect 360-degree feedback, and automatically feed appraisal ratings into performance incentive calculations.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Explore performance management</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/performance-management-software" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Performance & OKRs">
+                    <span>Explore Performance &amp; OKRs</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

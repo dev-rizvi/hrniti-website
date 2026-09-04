@@ -146,8 +146,8 @@ export default function SmallBusinessSolutionsClient() {
 
               {/* Secondary Lead Copy */}
               <p className="text-base md:text-lg text-emerald-100/90 leading-relaxed max-w-2xl font-normal">
-                Run payroll, attendance and everyday HR from one simple platform. HR Niti helps startups
-                and small businesses manage employees, attendance, leave, payroll, expenses and statutory
+                HR Niti provides the complete HRMS &amp; payroll software for small businesses in India. Built specifically to help growing startups
+                and small businesses manage employee records, attendance, leave, payroll, expenses and statutory
                 payroll workflows without relying on spreadsheets and disconnected HR tools.
               </p>
 
@@ -410,7 +410,7 @@ export default function SmallBusinessSolutionsClient() {
 
               {/* Direct AEO Definition Answer */}
               <p className="text-gray-800 text-base sm:text-lg md:text-xl font-normal leading-relaxed mb-6">
-                HRMS software for small businesses is a cloud-based system that helps companies manage
+                HRMS &amp; payroll software for small businesses in India is a cloud-based system that helps companies manage
                 employee records, attendance, leave, payroll, expenses and employee self-service from one
                 platform. For Indian businesses, a small-business HRMS can also automate payroll
                 workflows involving PF, ESIC, Professional Tax and TDS. Instead of maintaining employee
@@ -701,10 +701,7 @@ export default function SmallBusinessSolutionsClient() {
             {/* Feature Cards Grid (Exact styling of BusinessSizeFeatures) */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Module 1: Employee Management */}
-              <Link
-                href="/employee-management"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Users className="w-6 h-6" />
@@ -713,23 +710,24 @@ export default function SmallBusinessSolutionsClient() {
                     Core Database
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Employee Management
+                    <Link href="/employee-management" className="hover:underline">
+                      Employee Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Centralize employee records, KYC documents, bank account details, and employment history in a secure digital database. Issue appointment letters, manage probation, and organize hierarchies without paper files.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/employee-management" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Employee Database">
+                    <span>Explore Employee Database</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 2: Attendance Management */}
-              <Link
-                href="/attendance"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <CalendarCheck className="w-6 h-6" />
@@ -738,23 +736,24 @@ export default function SmallBusinessSolutionsClient() {
                     Time &amp; Tracking
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Attendance Management
+                    <Link href="/attendance" className="hover:underline">
+                      Attendance Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Capture staff attendance across office, hybrid, or field work. Support biometric devices, mobile GPS geotagged punches with geofencing, and selfie verification, with automated overtime and late calculation.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/attendance" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Attendance Tracking">
+                    <span>Explore Attendance Tracking</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 3: Payroll Management */}
-              <Link
-                href="/payroll-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <CreditCard className="w-6 h-6" />
@@ -763,23 +762,24 @@ export default function SmallBusinessSolutionsClient() {
                     Salary Engine
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Payroll Management
+                    <Link href="/payroll-software" className="hover:underline">
+                      Payroll Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Process error-free salaries in minutes. Automatically compute gross salaries, statutory deductions, bonuses, and loss of pay from verified attendance. Generate 1-click batch bank payout sheets.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/payroll-software" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Salary Engine">
+                    <span>Explore Salary Engine</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 4: Leave Management */}
-              <Link
-                href="/leave-management"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Calendar className="w-6 h-6" />
@@ -788,23 +788,24 @@ export default function SmallBusinessSolutionsClient() {
                     Leave Policies
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Leave Management
+                    <Link href="/leave-management" className="hover:underline">
+                      Leave Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Set up custom leave policies for CL, SL, and PL. Configure monthly balance accruals, carry-forward limits, and sandwich rules. Managers review and approve requests with one tap on mobile.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/leave-management" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Leave Policies">
+                    <span>Explore Leave Policies</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 5: Expense Management */}
-              <Link
-                href="/expense-management-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Receipt className="w-6 h-6" />
@@ -813,23 +814,24 @@ export default function SmallBusinessSolutionsClient() {
                     Reimbursements
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Expense Management
+                    <Link href="/expense-management-software" className="hover:underline">
+                      Expense Management
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Eliminate lost receipts and chaotic reimbursements. Employees snap photos of bills on mobile, submit claims, and managers approve digitally with payments settling right into monthly payroll.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/expense-management-software" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Expense Claims">
+                    <span>Explore Expense Claims</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 6: Employee Self-Service */}
-              <Link
-                href="/employee-self-service"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <Smartphone className="w-6 h-6" />
@@ -838,23 +840,24 @@ export default function SmallBusinessSolutionsClient() {
                     Mobile ESS App
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Employee Self-Service
+                    <Link href="/employee-self-service" className="hover:underline">
+                      Employee Self-Service
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Empower your team with intuitive Android &amp; iOS mobile apps. Employees view punch histories, apply for leave, download encrypted payslips, and check TDS forecasts, reducing HR queries by 85%.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/employee-self-service" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Mobile ESS App">
+                    <span>Explore Mobile ESS App</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 7: Payroll Compliance */}
-              <Link
-                href="/payroll-software"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <ShieldCheck className="w-6 h-6" />
@@ -863,23 +866,24 @@ export default function SmallBusinessSolutionsClient() {
                     Statutory Filing
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    Payroll Compliance
+                    <Link href="/payroll-software" className="hover:underline">
+                      Payroll Compliance
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     100% compliant with Indian labor laws without expensive third-party payroll agencies. Calculate EPF, ESIC, State PT, and Section 192 TDS, producing ready-to-upload electronic challans (ECR).
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/payroll-software" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Statutory Compliance">
+                    <span>Explore Statutory Compliance</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
 
               {/* Module 8: HR Reports & Analytics */}
-              <Link
-                href="/hr-mis-reports"
-                className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group cursor-pointer"
-              >
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-emerald-500 hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col justify-between group">
                 <div>
                   <div className="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-2xl font-bold mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors shadow-xs">
                     <BarChart3 className="w-6 h-6" />
@@ -888,17 +892,21 @@ export default function SmallBusinessSolutionsClient() {
                     Executive MIS
                   </span>
                   <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
-                    HR Reports &amp; Analytics
+                    <Link href="/hr-mis-reports" className="hover:underline">
+                      HR Reports &amp; Analytics
+                    </Link>
                   </h3>
                   <p className="text-xs sm:text-sm text-gray-600 leading-relaxed font-normal">
                     Gain instant workforce visibility. Generate MIS reports for headcount growth, attrition, monthly payroll spends, attendance percentages, and statutory registers cleanly formatted for audits.
                   </p>
                 </div>
                 <div className="mt-6 pt-4 border-t border-gray-100 flex items-center gap-2 text-xs font-bold text-emerald-600 group-hover:text-emerald-700">
-                  <span>Learn how it works</span>
-                  <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  <Link href="/hr-mis-reports" className="inline-flex items-center gap-1.5 hover:underline" aria-label="Explore Executive MIS Reports">
+                    <span>Explore Executive MIS Reports</span>
+                    <span className="group-hover:translate-x-1.5 transition-transform">➔</span>
+                  </Link>
                 </div>
-              </Link>
+              </div>
             </div>
           </div>
         </div>

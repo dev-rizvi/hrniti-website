@@ -42,7 +42,7 @@ export const businessSizeData: Record<string, BusinessSizeData> = {
         subtitle: "Built specifically for growing startups, boutiques, and agencies with 1 to 50 employees. Run monthly payroll in 10 minutes, automate PF/ESIC/PT taxes, and disburse salaries with 1 click.",
         employeeRange: "1 - 50 Employees",
         tagline: "Simple, Affordable & 100% Compliant for Startups & SMBs",
-        metaDescription: "Best HRMS & Payroll Software for Small Businesses in India (1-50 Employees). Automate PF, ESIC, PT, 1-click salary transfers, and mobile GPS attendance. Free Trial!",
+        metaDescription: "Best HRMS & payroll software for small businesses in India (1–50 staff). Automate PF, ESIC, PT, TDS, and mobile ESS in one platform.",
         keywords: [
             "Best HRMS software for small businesses",
             "Best payroll software for small businesses",
@@ -126,7 +126,7 @@ export const businessSizeData: Record<string, BusinessSizeData> = {
         subtitle: "Designed for mid-market scale-ups and multi-office companies with 50 to 250 employees. Streamline multi-department approvals, multi-branch compliance, and performance management.",
         employeeRange: "50 - 250 Employees",
         tagline: "Empower Your HR Team with Multi-Branch Automation & AI MIS Insights",
-        metaDescription: "Top HRMS & Payroll Software for Medium Businesses in India (50-250 Employees). Multi-branch statutory tax, custom approval chains, performance OKRs & Tally integration.",
+        metaDescription: "HRMS & payroll software for medium businesses in India (50–250 staff). Automate multi-branch payroll, approvals, attendance, and HR MIS.",
         keywords: [
             "Medium Business HRMS Software India",
             "Payroll Software 50-250 Employees",
@@ -208,7 +208,7 @@ export const businessSizeData: Record<string, BusinessSizeData> = {
         subtitle: "Built for large enterprises, multi-factory manufacturing plants, and corporate groups with 250 to 1000+ employees. Enterprise security, custom ERP integration, and dedicated account support.",
         employeeRange: "250 - 1000+ Employees",
         tagline: "Enterprise Workforce Automation, Multi-State Scale & Custom ERP Integration",
-        metaDescription: "Enterprise HRMS & Payroll Software for Large Businesses in India (250-1000+ Employees). SAP/Oracle API integration, multi-shift factory rosters, audit logs & dedicated CSM.",
+        metaDescription: "Enterprise HRMS & payroll software for large businesses in India (250–1000+ staff). Automate multi-state payroll, factory shifts, and ERP.",
         keywords: [
             "Enterprise HRMS Software India",
             "Large Business Payroll Software 1000+ Employees",
