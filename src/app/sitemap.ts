@@ -121,6 +121,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         { url: `${BASE_URL}/analytics`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
         { url: `${BASE_URL}/jobposting`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
         { url: `${BASE_URL}/employee-tracking`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+        { url: `${BASE_URL}/employee-monitoring-productivity-software`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
         { url: `${BASE_URL}/hiring`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
         { url: `${BASE_URL}/reports`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
         { url: `${BASE_URL}/partners`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },

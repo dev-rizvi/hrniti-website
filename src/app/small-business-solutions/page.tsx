@@ -1,89 +1,131 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import BusinessSizeHero from "@/components/solutions/BusinessSizeHero";
-import BusinessSizeFeatures from "@/components/solutions/BusinessSizeFeatures";
-import BusinessSizeComparison from "@/components/solutions/BusinessSizeComparison";
-import BusinessSizeFaq from "@/components/solutions/BusinessSizeFaq";
-import BusinessSizeNav from "@/components/solutions/BusinessSizeNav";
-import { businessSizeData } from "@/data/businessSizeData";
+import SmallBusinessSolutionsClient from "./SmallBusinessSolutionsClient";
+import { SMALL_BUSINESS_FAQS } from "./smallBusinessData";
 
-const data = businessSizeData.small;
 const BASE_URL = "https://www.hrniti.com";
-const url = `${BASE_URL}/${data.seoSlug}`;
+const pageUrl = `${BASE_URL}/small-business-solutions`;
 
 export const metadata: Metadata = {
-    title: "HRMS & Payroll Software for Small Business",
-    description: data.metaDescription,
-    keywords: data.keywords,
-    alternates: { canonical: url },
-    openGraph: {
-        title: `${data.title} | HR Niti`,
-        description: data.metaDescription,
-        url,
-        type: "website",
-        siteName: "HR Niti",
-        locale: "en_IN",
-        images: [{ url: "/og-default.png", width: 1200, height: 630, alt: data.title }],
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: `${data.title} | HR Niti`,
-        description: data.metaDescription,
-        images: ["/og-default.png"],
-    },
+  title: "HRMS & Payroll for Small Businesses in India",
+  description:
+    "Manage HR and payroll for your small business with HR Niti. Automate attendance, leave, payroll, PF, ESIC, PT, TDS, payslips and employee self-service in one platform.",
+  keywords: [
+    "HRMS software for small business",
+    "HRMS for small businesses in India",
+    "payroll software for small business India",
+    "HRMS for startups",
+    "payroll software for startups",
+    "employee management software for small business",
+    "attendance software for small business",
+    "HRMS for 10 employees",
+    "HRMS for 20 employees",
+    "HRMS for 50 employees",
+    "small business payroll software India",
+    "affordable HRMS software India",
+    "payroll automation for startups",
+  ],
+  alternates: {
+    canonical: pageUrl,
+  },
+  openGraph: {
+    title: "HRMS & Payroll for Small Businesses in India | HR Niti",
+    description:
+      "Manage HR and payroll for your small business with HR Niti. Automate attendance, leave, payroll, PF, ESIC, PT, TDS, payslips and employee self-service in one platform.",
+    url: pageUrl,
+    type: "website",
+    siteName: "HR Niti",
+    locale: "en_IN",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "HRMS & Payroll for Small Businesses in India",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HRMS & Payroll for Small Businesses in India | HR Niti",
+    description:
+      "Manage HR and payroll for your small business with HR Niti. Automate attendance, leave, payroll, PF, ESIC, PT, TDS, payslips and employee self-service in one platform.",
+    images: ["/og-default.png"],
+  },
 };
 
 export default function SmallBusinessPage() {
-    const schemas = [
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "HR Niti",
+      url: BASE_URL,
+      logo: `${BASE_URL}/logo.png`,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
         {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "HR Niti",
-            url: BASE_URL,
-            logo: `${BASE_URL}/logo.png`,
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
         },
         {
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-                { "@type": "ListItem", position: 1, name: "Home", item: BASE_URL },
-                { "@type": "ListItem", position: 2, name: data.title, item: url },
-            ],
+          "@type": "ListItem",
+          position: 2,
+          name: "Solutions",
+          item: `${BASE_URL}/small-business-solutions`,
         },
         {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: data.title,
-            description: data.metaDescription,
-            url,
-            provider: { "@type": "Organization", name: "HR Niti", url: BASE_URL },
-            serviceType: "Small Business HRMS & Payroll Automation",
+          "@type": "ListItem",
+          position: 3,
+          name: "HRMS & Payroll Software for Small Businesses in India",
+          item: pageUrl,
         },
-        {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: data.faqs.map((faq) => ({
-                "@type": "Question",
-                name: faq.question,
-                acceptedAnswer: { "@type": "Answer", text: faq.answer },
-            })),
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      name: "HR Niti Small Business HRMS & Payroll Software",
+      operatingSystem: "Cloud / Web / Android / iOS",
+      applicationCategory: "BusinessApplication",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "Contact for Pricing",
+        availability: "https://schema.org/InStock",
+      },
+      description:
+        "Comprehensive HRMS and payroll software tailored for Indian startups and SMBs with 1–50 employees. Automates attendance, leave, PF, ESIC, PT, TDS, payslips, and self-service.",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: SMALL_BUSINESS_FAQS.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
         },
-    ];
+      })),
+    },
+  ];
 
-    return (
-        <main className="min-h-screen bg-white">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
-            />
-            <Navbar />
-            <BusinessSizeHero data={data} />
-            <BusinessSizeFeatures data={data} />
-            <BusinessSizeComparison data={data} />
-            <BusinessSizeFaq employeeRange={data.employeeRange} faqs={data.faqs} />
-            <BusinessSizeNav currentScale={data.id} />
-            <Footer />
-        </main>
-    );
+  return (
+    <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
+      />
+      <Navbar />
+      <SmallBusinessSolutionsClient />
+      <Footer />
+    </main>
+  );
 }

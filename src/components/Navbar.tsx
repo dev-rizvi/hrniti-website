@@ -5,7 +5,7 @@ import {
     ChevronDown, Menu, X, Building, Building2, Landmark,
     Users, Layout, CheckCircle, Zap, FileText, BarChart3,
     Cloud, ClipboardList, GraduationCap, TrendingUp, MessageSquare,
-    Smartphone, Library, Calculator, BookOpen, Download, Mail, Info
+    Smartphone, Library, Calculator, BookOpen, Download, Mail, Info, Monitor
 } from "lucide-react";
 
 export default function Navbar() {
@@ -51,6 +51,7 @@ export default function Navbar() {
                         { name: "Niti AI Chatbot",           href: "/hr-chatbot",                                        icon: MessageSquare, desc: "24/7 AI conversational HR assistant" },
                         { name: "Mobile App",              href: "/hrms-mobile-app",                                   icon: Smartphone, desc: "iOS & Android ESS application" },
                         { name: "HR MIS Reports",          href: "/hr-mis-reports",                                    icon: BarChart3, desc: "Statutory PF/ESIC ECR & MIS reporting" },
+                        { name: "Workforce Intelligence",  href: "/employee-monitoring-productivity-software",         icon: Monitor, desc: "Windows employee monitoring & productivity analytics" },
                     ]
                 }
             ]
